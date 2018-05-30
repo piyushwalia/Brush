@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>M2 theme styling</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <link rel="stylesheet/less" type="text/css" href="styles.less" />
+        <script>less = { env: 'development'};</script>
+        <script src="js/less.js" type="text/javascript"></script> 
+        <script>less.watch();</script>
+     
+
+    </head>
+    <body>
+            <span>Varible Name : @page__background-color</span>
+        <div class="color_input">   
+                <p data-var-name="@page__background-color">Page Background color</p>                         
+                <input type="color" value="#2cba92">
+        </div>
+       
+        
+        <script>
+                function generateFullName()
+            {
+                document.getElementById('tt').innerText = 
+                    document.getElementById('fName').value + ' ' + 
+                    document.getElementById('lName').value;
+            }
+                </script>    
+       
+
+        
+      
+      
+
+
+    </body>
+</html>
