@@ -4,7 +4,9 @@
   "description": "App to generate magento 2 theme stayles",
   "main": "main.js",
   "dependencies": {
-    "electron": "^2.0.2"
+    "electron": "^2.0.2",
+    "electron-storage": "^1.0.7",
+    "node-each": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {

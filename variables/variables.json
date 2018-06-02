@@ -1,0 +1,17 @@
+{
+    "base_variables": [
+        { 
+            "name":"page__background-color",
+            "value": "@page__background-color"
+        },
+        {
+            "name":"body_color",
+            "value": "@body_color"
+        },
+        {
+            "name":"navigation_color",
+            "value": "@navigation_color"
+        }
+    ]
+ }
+

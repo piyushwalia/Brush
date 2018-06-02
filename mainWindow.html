@@ -2,8 +2,51 @@
 <html lang="en">
 <head>
     <title>Magento 2 theme generation</title>
+   
 </head>
 <body>
     <h1>Less compilation</h1>
+
+    <div id="base"></div>
+    <button type="button" id="getvalue">Get Value</button>
+    <div id="results"></div>
+
+    <script>window.$ = window.jQuery = require('./js/jquery-3.3.1.min.js');</script>
+    <script>
+       
+       var variables = [];
+            $.getJSON('./variables/variables.json', function(data) {
+                $.each(data.base_variables, function(i, f) {
+                var var_data = '<div class="color_input"><span>'+f.name+'</span><input type="text" name='+f.value+' value=""></div>'
+                    $(var_data).appendTo("#base");
+            });
+
+        });
+        $(document).on('click', '#getvalue', function(){
+                var x = $("#base :input").serializeArray();
+                var ss = $.each(x, function(i, field){
+                    $("#results").append(field.name + ':' + field.value + ';');
+                });
+        });
+        
+        
+
+       function less(){
+                var x = $("#base :input").serializeArray();
+                    var bb =  $.each(x, function(i, field){
+                    $("#results").append(field.name + ':' + field.value + ';' + '<br>');                   
+                }); 
+                fs = require('fs');
+
+                fs.writeFile('_variables.less', JSON.stringify(bb, null),function (err) {
+                if (err) return console.log(err);
+                console.log('Hello World > helloworld.txt');
+                });
+        }
+        setTimeout(less, 1000)    
+                
+    </script>
+    <script src="nn.js"></script>
+    
 </body>
 </html>
