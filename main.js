@@ -2,6 +2,7 @@ const electron = require('electron');
 const path = require('path');
 const url = require('url');
 const storage = require('electron-storage');
+var ipc = require('electron').ipcRenderer;
 
 process.env.NODE_ENV = 'development';
 
@@ -36,7 +37,7 @@ const mainMenuTemplate = [
         label: 'File',
         submenu:[
             {
-                label: 'Add Item'
+                label: 'Generate Variable File',               
             },
             {
                 label:'Clear items'
