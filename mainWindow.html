@@ -8,8 +8,9 @@
     <h1>Less compilation</h1>
 
     <div id="base"></div>
-    <button type="button" id="getvalue">Get Value</button>
+    <!-- <button type="button" id="getvalue">Get Value</button> -->
     <div id="results"></div>
+    <input type="button" id="create_file" value="create file"/>
 
     <script>window.$ = window.jQuery = require('./js/jquery-3.3.1.min.js');</script>
     <script>
@@ -22,28 +23,38 @@
             });
 
         });
-        $(document).on('click', '#getvalue', function(){
-                var x = $("#base :input").serializeArray();
-                var ss = $.each(x, function(i, field){
-                    $("#results").append(field.name + ':' + field.value + ';');
-                });
-        });
-        
-        
+       
+        const fs = require("fs");
 
-       function less(){
-                var x = $("#base :input").serializeArray();
-                    var bb =  $.each(x, function(i, field){
-                    $("#results").append(field.name + ':' + field.value + ';' + '<br>');                   
-                }); 
-                fs = require('fs');
+        const {dialog} = require("electron").remote;
+        document.getElementById("create_file").addEventListener("click", () => {
+            let content='';      
+            jQuery.expr[':'].hasValue = function(el) {
+                    return el.value != "";
+            };       
+            var x = $("#base :input:hasValue").serializeArray();
+                $.each(x, function(i, field){
+                    content += field.name + ':' +  field.value + ';'+'\n';      
+                    
+            });
+            
+         
+                
+            dialog.showSaveDialog((filename) => {
+                if(filename == undefined){
+                    console.log("clicked the button, but didint create the file")
+                    return;
+                }
+                fs.writeFile(filename, content, (err) => {
+                    if(err){
+                        console.log('error occured while creating file' + err.message);
+                    }
+                    alert("file created successfully");
+                })
+            });
 
-                fs.writeFile('_variables.less', JSON.stringify(bb, null),function (err) {
-                if (err) return console.log(err);
-                console.log('Hello World > helloworld.txt');
-                });
-        }
-        setTimeout(less, 1000)    
+        },false)
+
                 
     </script>
     <script src="nn.js"></script>
