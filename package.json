@@ -8,7 +8,9 @@
     "electron-storage": "^1.0.7",
     "node-each": "^1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron-reload": "^1.2.2"
+  },
   "scripts": {
     "start": "electron ."
   },

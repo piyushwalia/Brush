@@ -9,69 +9,14 @@
 
     <div id="base"></div>        
     <button  id="create_file" >Create File</button>
-
-    <script>window.$ = window.jQuery = require('./js/jquery-3.3.1.min.js');</script>
-    <script>
-       
-       var variables = [];
-            $.getJSON('./variables/variables.json', function(data) {
-                $.each(data.base_variables, function(i, f) {
-                var var_data = '<div class="color_input"><span>'+f.name+'</span><input type="text" name='+f.value+' value=""></div>'
-                    $(var_data).appendTo("#base");
-            });
-
-        });
-       
-        const fs = require("fs");
-        document.getElementById("create_file").addEventListener("click", () => {
-            let content='';      
-        
-            var x = document.getElementsByTagName('input');
-                for(var i in x){                
-                    if(x.length>= parseInt(i)  && x[i].value!=''){
-                        content += x[i].name + ':' +  x[i].value + ';'+'\n';      
-                }}
-                fs.writeFile("_theme.less", content, function(err) {
-                    if(err) {
-                        return console.log(err);
-                    }
-                console.log("The file was saved!");
-            }); 
-        });
-
-        // Jquery code
-        // document.getElementById("create_file").addEventListener("click", () => {
-        //     let content='';      
-                   
-        //     var x = document.getElementsByTagName('input');
+    <button id="notifyBtn">Upload Mockup</button>
+    
 
 
-        //     for(var i in x){
-        //         //console.log( parseInt(i), typeof  x.length);
-        //         if(x.length>= parseInt(i)  && x[i].value!=''){
-        //             content += x[i].name + ':' +  x[i].value + ';'+'\n';      
-        //     }}
 
-        //     // x.forEach(function(k,value) {
-        //     //     console.log(k,value);
-        //     // });
-        //     //     $.each(x, function(i, field){
-        //     //         if(field.value!==''){
-        //     //         content += field.name + ':' +  field.value + ';'+'\n';      
-        //     //         }
-        //     // });
-            
-        //     fs.writeFile("variable.less", content, function(err) {
-        //     if(err) {
-        //         return console.log(err);
-        //     }
-        //         console.log("The file was saved!");
-        //     }); 
-                
-        //     });
-
-                
-    </script>
+    <script>window.$ = window.jQuery = require('./vendor/jquery-3.3.1.min.js');</script>
+    <script src="./core/core.js"></script>
+  
     
     
 </body>

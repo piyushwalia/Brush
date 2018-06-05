@@ -2,16 +2,28 @@
     "base_variables": [
         { 
             "name":"page__background-color",
-            "value": "@page__background-color"
+            "value": "@page__background-color",
+            "data": "color"
         },
         {
             "name":"body_color",
-            "value": "@body_color"
+            "value": "@body_color",
+            "data": "color"
         },
         {
             "name":"navigation_color",
-            "value": "@navigation_color"
+            "value": "@navigation_color",
+            "data": "color"
+        }
+    ],
+    "button_variables": [
+        {            
+            "name":"checkout__background-color",
+            "value": "@checkout__background-color",
+            "data": "value"            
         }
     ]
  }
+
+
 

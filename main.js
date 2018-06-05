@@ -1,9 +1,11 @@
+require('electron-reload')(__dirname)
+
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
 const storage = require('electron-storage');
 var ipc = require('electron').ipcRenderer;
-
+ 
 process.env.NODE_ENV = 'development';
 
 const {app, BrowserWindow, Menu} = electron;
@@ -37,7 +39,7 @@ const mainMenuTemplate = [
         label: 'File',
         submenu:[
             {
-                label: 'Generate Variable File',               
+                label: 'Upload Mockup File ',                       
             },
             {
                 label:'Clear items'
@@ -51,3 +53,4 @@ const mainMenuTemplate = [
         ]
     }
 ];
+
