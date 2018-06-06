@@ -15,7 +15,11 @@ let mainWindow;
 
 app.on('ready', function(){
 
-    mainWindow = new BrowserWindow({});
+    mainWindow = new BrowserWindow({
+        webPreferences: {
+            nodeIntegration: false, 
+          },
+    });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainWindow.html'),
         protocol: 'file:',
