@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
     <title>Magento 2 theme generation</title>
-   
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
     <h1>Theme styling</h1>
     <!-- Right Container -->
     <div id="right_cont">
+        <select name="@layout_width">
+            <option></option>
+            <option>2</option>
+        </select>
     </div>
     
+
+
+
     <!-- Export container -->
     <button  id="create_file" >Create File</button>
     <button id="upload_mockup">Upload Mockup</button>
     
 
-
+    <div class="copy_value" id="rect"></div>
 
     <script>window.$ = window.jQuery = require('./vendor/jquery-3.3.1.min.js');</script>
     

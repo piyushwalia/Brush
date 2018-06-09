@@ -1,0 +1,10 @@
+.copy_value{
+    width: 20%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: red;
+    padding: 10px;
+    color: #fff
+}
