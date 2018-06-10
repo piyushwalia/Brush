@@ -15,7 +15,12 @@ let mainWindow;
 
 app.on('ready', function(){
 
-    mainWindow = new BrowserWindow({});
+    mainWindow = new BrowserWindow({
+        titleBarStyle: 'hiddenInset',
+        frame: false,
+        width:800,
+        height:600
+    });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainWindow.html'),
         protocol: 'file:',
