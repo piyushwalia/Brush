@@ -1,9 +1,11 @@
 require('electron-reload')(__dirname)
 
+
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
 const storage = require('electron-storage');
+
 var ipc = require('electron').ipcRenderer;
  
 process.env.NODE_ENV = 'development';
@@ -15,9 +17,7 @@ let mainWindow;
 
 app.on('ready', function(){
 
-    mainWindow = new BrowserWindow({
-        titleBarStyle: 'hiddenInset',
-        frame: false,
+    mainWindow = new BrowserWindow({            
         width:800,
         height:600
     });
@@ -29,12 +29,15 @@ app.on('ready', function(){
   
     // Open the DevTools.
     mainWindow.webContents.openDevTools()
+    
   // Build menu from template
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
   // Insert menu
   Menu.setApplicationMenu(mainMenu);
 
 });
+
+
 
 
 
@@ -56,6 +59,23 @@ const mainMenuTemplate = [
                 }
             }
         ]
-    }
+    },
+    {
+        label: "Edit",
+        submenu: [
+            { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
+            { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
+            { type: "separator" },
+            { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
+            { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:"},
+            { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:",
+                // click(){
+                //     document.querySelectorAll("input").value = "";
+                // } 
+            },
+            { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
+        ]}
+    
 ];
+
 

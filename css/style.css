@@ -1,11 +1,98 @@
 
+
 @font-face {
-    font-family: 'karlaregular';
-    src: url('../fonts/karla-regular-webfont.woff2') format('woff2');         
+    font-family: 'lorabold';
+    src: url('../fonts/lora-bold-webfont.woff2') format('woff2');         
     font-weight: normal;
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'loraregular';
+    src: url('../fonts/lora-regular-webfont.woff2') format('woff2');         
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#212542;
+    font-size: 14px;
+    font-family: 'loraregular';
+    letter-spacing: 1px;
+}
+.app_title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #dadada;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 10px;    
+}
+#right_cont{
+    padding: 10px;
+}
+.var_title{
+    background: #474b7b;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #2f3258;
+}
+.var_content{
+    display: none;
+    background: #373658;
+    padding: 10px;
+} 
+
+.variable_container{
+    color: #e3e3e3;
+    padding: 5px;
+    
+}
+
+input[type="text"]{
+    padding: 5px;
+    box-shadow: none;
+    border: none;
+}
+
+.variable_container span{
+    margin-right: 10px;    
+}
+.variable_container input{
+    
+}
+.paste_button{
+    background-image: url('../img/paste_icon.svg');
+    width: 20px;
+    height: 20px;
+    font-size: 0px;
+    display: inline-block;
+    background-size: cover;
+    cursor: pointer;
+    vertical-align: top;
+    margin-left: 10px;
+    position: relative;
+}
+.paste_button:hover{
+
+}
+
+.color_display{
+    background: #333763;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+} 
 
 
 .copy_value{
@@ -24,13 +111,7 @@ button {
   }
 .titlebar {
     -webkit-user-select: none;
-    -webkit-app-region: drag;
-}
-
-body{
-    background-color:#9013FE;
-    font-size: 14px;
-    font-family: 'karlaregular';
+    -webkit-app-region: no-drag;
 }
 
 footer{
