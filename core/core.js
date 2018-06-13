@@ -130,7 +130,7 @@ const input_parent__cont = '<div class="variable_container"><span>';
         document.getElementById("create_file").addEventListener("click", () => {
             let content='';      
         
-            var x = document.querySelectorAll('input, select');
+            var x = document.querySelectorAll('input[type="text"], select');
                 for(var i in x){       
                     if(x.length>= parseInt(i)  && x[i].value!=''){
                         content += x[i].name + ':' +  x[i].value + ';'+'\n';      
@@ -143,16 +143,3 @@ const input_parent__cont = '<div class="variable_container"><span>';
             }); 
         });
         
-        // const upload_src = document.getElementById('upload_mockup')
-
-        // upload_src.addEventListener('click', function (event) {
-        //     const modalPath = path.join('file://', __dirname, '/views/upload_Image.html')
-        //     let win = new BrowserWindow({
-        //          width: 800,
-        //         height: 600,
-        //         alwaysOnTop: true,
-        //     })
-        //     win.on('close', function () { win = null })
-        //     win.loadURL(modalPath)
-        //     win.show() 
-        // });
