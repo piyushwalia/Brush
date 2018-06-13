@@ -6,18 +6,26 @@
 </head>
 <body style="-webkit-app-region: drag">
     <h1 class="app_title">Magento 2 theme Styling using Core Variables</h1>
-    <!-- Right Container -->
+    <!-- Left Container -->
     <div id="right_cont">
         
     </div>
     
+    <!-- Image container -->
+    <div class="upload_container _example-GETIMAGECOLORS_full-container">        
+            <img id="uploaded__image" src="#" alt="your image" />        
+            <div class="chmln-demo__colors"></div>
+    </div>    
 
-
-
+    
     <!-- Export container -->
     <footer>
-        <button  id="create_file" >Create File</button>
-        <button id="upload_mockup">Upload Mockup</button>
+        <button  id="create_file" class="export__file" >Create File</button>
+        <div class="upload_button--cont">
+            <button class="upload__btn">Upload a file</button>
+            <input type="file" id="upload__file" />
+        </div>
+            
     </footer>
 
     <div class="copy_value" id="rect"></div>
@@ -26,7 +34,7 @@
     
     <script src="./core/core.js"></script>
     <script src="./vendor/jscolor.js"></script>
-  
+    <script src="./vendor/jquery.chameleon.js"></script>
     
     
 </body>

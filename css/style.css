@@ -1,17 +1,25 @@
-
-
 @font-face {
-    font-family: 'lorabold';
-    src: url('../fonts/lora-bold-webfont.woff2') format('woff2');         
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2');         
     font-weight: normal;
     font-style: normal;
 
 }
+
 @font-face {
-    font-family: 'loraregular';
-    src: url('../fonts/lora-regular-webfont.woff2') format('woff2');         
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2');         
     font-weight: normal;
     font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2');         
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 *{
@@ -22,24 +30,26 @@
 body{
     background-color:#212542;
     font-size: 14px;
-    font-family: 'loraregular';
+    font-family: 'robotolight';
     letter-spacing: 1px;
+    font-weight: normal;
 }
 .app_title{
     margin-top: 10px;
     margin-bottom: 10px;
     color: #dadada;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px;    
 }
 #right_cont{
     padding: 10px;
+    width: 88%; 
 }
 .var_title{
     background: #474b7b;
     padding: 6px 10px;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     text-transform: capitalize;
     color: #fff;
@@ -56,7 +66,7 @@ body{
 .variable_container{
     color: #e3e3e3;
     padding: 5px;
-    
+    font-size: 12px;
 }
 
 input[type="text"]{
@@ -66,7 +76,7 @@ input[type="text"]{
 }
 
 .variable_container span{
-    margin-right: 10px;    
+    margin-right: 10px;        
 }
 .variable_container input{
     
@@ -83,10 +93,6 @@ input[type="text"]{
     margin-left: 10px;
     position: relative;
 }
-.paste_button:hover{
-
-}
-
 .color_display{
     background: #333763;
     position: fixed;
@@ -94,15 +100,42 @@ input[type="text"]{
     padding: 20px;
 } 
 
+.upload_container{
+    position: absolute;
+    width: 10%;
+    top: 0;
+    right: 0;
+    background:#EEEEEE;
+    height: 100%;
+    z-index: 1;
+    display: none;    
+}
+
+.upload_container img{
+    width: 100%;
+}
+
+#uploaded__image{
+    display: none
+}
+.upload_button--cont{
+    float: left;
+    position: relative;
+}
+.chmln__colors-elem{
+    padding: 10px;
+    display: block;
+}
 
 .copy_value{
-    width: 20%;
-    height: 10px;
+    width: 100%;
+    height: 4px;
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     right: 0;
-    background: red;
-    padding: 10px;
+    font-size: 0px;
+    background: #212542;
+    padding: 2px;
     color: #fff
 }
 
@@ -120,12 +153,31 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    width: 100%;   
+    z-index: 2; 
+}
+.export__file{
+    float: left;
+    margin-right: 10px;
+}
+.upload_button--cont input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
     width: 100%;
 }
+
 footer button{
-    background: #313A5A;
+    background: #25b647;
     padding: 8px 15px;
     color: #fff;
     font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     border: none;
+    font-family: 'robotoregular';
+    cursor: pointer;
 }

@@ -24,7 +24,7 @@ const input_parent__cont = '<div class="variable_container"><span>';
                 }                
                 jscolor.installByClassName("jscolor");   
 
-                // copy button added
+                // Paste button added
                 const paste_button = "<span class='paste_button'>Paste</span>"
                 const paste_container = $('.variable_container')
                 paste_container.append(paste_button);     
@@ -40,7 +40,7 @@ const input_parent__cont = '<div class="variable_container"><span>';
                     }                                                            
                     else{
                         let copy_value = $(this).val(); 
-                        $('.copy_value').text(copy_value);                            
+                        $('.copy_value').text(copy_value).css({"background-color":copy_value});                        
                         console.log(copy_value)
                     }
                 });
@@ -77,7 +77,7 @@ const input_parent__cont = '<div class="variable_container"><span>';
                             var back = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
                         
                             var copied_value = $('.copy_value').text();                    
-                            $(this).prev().val(copied_value).css({"background-color": copied_value, "color": fore})
+                            $(this).prev().val(copied_value).css({"background-color": copied_value, "color": fore})                            
                             e.preventDefault();
                         }
                         else{
@@ -89,7 +89,43 @@ const input_parent__cont = '<div class="variable_container"><span>';
         });
 
 
-       
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    $('#uploaded__image').attr('src', e.target.result);                    
+                    $("img").chameleon("getImageColors", {
+                        "sort_type": "disabled",
+                        "color_format": "hex",
+                        "img_src": "",
+                        "color_alpha": 200,
+                        "color_difference": 120,
+                        "canvas_side": 400,
+                        "debug": false,
+                        "onGetColorsSuccess": function(colors, $container, s) { 
+                          var $colors = jQuery.fn.chameleon('wrapColor', colors, s.color_format); 
+                          jQuery('._example-GETIMAGECOLORS_full-container .chmln-demo__colors').html($colors); 
+                          $container.removeClass('_loading').addClass('_done').siblings().removeClass('_done'); 
+                        },
+                        "onGetColorsError": function(colors, $container, s, img_src) { 
+                          jQuery('._example-GETIMAGECOLORS_full-container .chmln-demo__colors').html('Error occurred on getImageColors!'); 
+                          console.error('Error occurred on getImageColors!', img_src); 
+                        }
+                      });
+                }
+                
+                reader.readAsDataURL(input.files[0]);
+                
+            }
+        }
+        
+        $("#upload__file").change(function(){
+            readURL(this);
+        });
+        $('#upload__file').on('click', function(){
+            $('.upload_container').fadeIn();
+        })              
 
         document.getElementById("create_file").addEventListener("click", () => {
             let content='';      
@@ -107,16 +143,16 @@ const input_parent__cont = '<div class="variable_container"><span>';
             }); 
         });
         
-        const upload_src = document.getElementById('upload_mockup')
+        // const upload_src = document.getElementById('upload_mockup')
 
-        upload_src.addEventListener('click', function (event) {
-            const modalPath = path.join('file://', __dirname, '/views/upload_Image.html')
-            let win = new BrowserWindow({
-                 width: 800,
-                height: 600,
-                alwaysOnTop: true,
-            })
-            win.on('close', function () { win = null })
-            win.loadURL(modalPath)
-            win.show() 
-        });
+        // upload_src.addEventListener('click', function (event) {
+        //     const modalPath = path.join('file://', __dirname, '/views/upload_Image.html')
+        //     let win = new BrowserWindow({
+        //          width: 800,
+        //         height: 600,
+        //         alwaysOnTop: true,
+        //     })
+        //     win.on('close', function () { win = null })
+        //     win.loadURL(modalPath)
+        //     win.show() 
+        // });

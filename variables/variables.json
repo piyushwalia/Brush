@@ -18,8 +18,8 @@
     ],
     "button": [
         {            
-            "name":"checkout__background-color",
-            "value": "@checkout__background-color",
+            "name":"Button Font Size",
+            "value": "@button_size",
             "data": "value"            
         },
         {            
