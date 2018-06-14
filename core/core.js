@@ -18,18 +18,18 @@ const input_parent__cont = '<div class="variable_container"><span>';
 
               
                 
-                let list = document.querySelectorAll("[data-type='color']");
+                const list = document.querySelectorAll("[data-type='color']");
                 for (let i = list.length; i--;) {
                     list[i].className = list[i].className + 'jscolor {required:false,refine:false, hash:true,  borderWidth:0 }';
                 }                
                 jscolor.installByClassName("jscolor");   
 
                 // Paste button added
-                const paste_button = "<span class='paste_button'>Paste</span>"
-                const paste_container = $('.variable_container')
-                paste_container.append(paste_button);     
+                const paste_button = "<span class='paste_button'>Paste</span>";               
+                const paste_container = $('input.jscolor');                
+                paste_container.after(paste_button);     
 
-                $('input[type="text').on('focusin focusout', function(e) {
+                $('input.jscolor').on('focusin focusout', function(e) {
                     if(!$.trim(this.value).length) {  
                         var toast = $('<div class="color_display"></div>')
                         $('body').append(toast);
@@ -83,9 +83,7 @@ const input_parent__cont = '<div class="variable_container"><span>';
                         else{
                             alert('Please select Value before Pasting')
                         }                                                                                                                
-                });
-
-
+                });                
         });
 
 
@@ -107,11 +105,15 @@ const input_parent__cont = '<div class="variable_container"><span>';
                           var $colors = jQuery.fn.chameleon('wrapColor', colors, s.color_format); 
                           jQuery('._example-GETIMAGECOLORS_full-container .chmln-demo__colors').html($colors); 
                           $container.removeClass('_loading').addClass('_done').siblings().removeClass('_done'); 
+                          $('.chmln__colors-elem').on('click', function(){
+                            var dd= $(this).text();
+                            $('.copy_value').text(dd).css({"background-color":dd});                        
+                        });
                         },
                         "onGetColorsError": function(colors, $container, s, img_src) { 
                           jQuery('._example-GETIMAGECOLORS_full-container .chmln-demo__colors').html('Error occurred on getImageColors!'); 
                           console.error('Error occurred on getImageColors!', img_src); 
-                        }
+                        },                        
                       });
                 }
                 
@@ -124,9 +126,9 @@ const input_parent__cont = '<div class="variable_container"><span>';
             readURL(this);
         });
         $('#upload__file').on('click', function(){
-            $('.upload_container').fadeIn();
-        })              
-
+            $('.upload_container').addClass('right_panel--active');
+            $('#right_cont').addClass('left_panel--active');
+        })                      
         document.getElementById("create_file").addEventListener("click", () => {
             let content='';      
         
