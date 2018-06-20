@@ -1,55 +1,53 @@
 {
     "base": [
-        { 
-            "name":"Page Background Color",
+        {             
             "value": "@page__background-color",
+            "data": "color",
+            "type":"base"             
+        },
+        {
+            "value": "@font-size__base",
+            "data": "font"            
+        },
+        {
+            "value": "@text__color",
             "data": "color"
         },
         {
-            "name":"Body Color",
-            "value": "@body_color",
+            "value": "@link__color",
             "data": "color"
         },
         {
-            "name":"Navigation Color",
-            "value": "@navigation_color",
+            "value": "@link__visited__color",
             "data": "color"
-        }
+        },
+        {
+            "value": "@link__hover__color",
+            "data": "color"
+        },
+        {
+            "value": "@link__active__color",
+            "data": "color"
+        }               
     ],
-    "button": [
-        {            
-            "name":"Button Font Size",
-            "value": "@button_size",
-            "data": "value"            
+    "Layout":[
+        { 
+            "value":"@layout__max-width",
+            "data": "value",
+            "type": "layout"
         },
-        {            
-            "name":"checkout__background-color",
-            "value": "@checkout__background-color",
-            "data": "color"            
+        {
+            "value":"@layout-indent__width",
+            "data": "value",
+            "comments" :"Left and Right Padding of the wrapper"
         },
-        {            
-            "name":"checkout__background-color",
-            "value": "@checkout__background-color",
-            "data": "value"            
+        {
+            "value": "@layout__width-xs-indent",
+            "data": "value",
+            "comments" :"Left and Right Padding of the wrapper for Mobile"
         }
-    ],
-    "navigation": [
-        {            
-            "name":"checkout__background-color",
-            "value": "@checkout__background-color",
-            "data": "value"            
-        },
-        {            
-            "name":"checkout__background-color",
-            "value": "@checkout__background-color",
-            "data": "color"            
-        },
-        {            
-            "name":"checkout__background-color",
-            "value": "@checkout__background-color",
-            "data": "value"            
-        }
-    ]
+
+    ]   
  }
 
 

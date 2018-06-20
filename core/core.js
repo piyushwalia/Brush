@@ -3,17 +3,24 @@ const path = require('path')
 const BrowserWindow = electron.remote.BrowserWindow;
 const fs = require("fs");
 const variables = [];
-const input_parent__cont = '<div class="variable_container"><span>';
+const input_parent__cont = '<div class="variable_container"><span class="variable__name">';
 
-
+ 
 
         $.getJSON('./variables/variables.json', function(data) {                               
                 $.each(data, function(i,value){                    
-                     $('#right_cont').append('<div id='+i+'><h2 class="var_title">'+i+'</h2><div class=" '+i+'__content  var_content"></div></div>');                                             
-                     $.each(this, function(b, f) {
-                        const var_data = input_parent__cont +f.name+'</span><input type="text" name='+f.value+'  data-type='+f.data+'></div>';                                                    
-                          $(var_data).appendTo('.' + i + '__content');
-                    });     
+                     $('#right_cont').append('<div id='+i+' class="box__container"><h2 class="var_title">'+i+'</h2><div class=" '+i+'__content  var_content"></div></div>');                                             
+                     $.each(this, function(b, f) {                      
+                     if (jQuery.isEmptyObject(f.comments))
+                        {
+                            const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'></div>';                                                    
+                            $(var_data).appendTo('.' + i + '__content');
+                        }
+                        else{
+                            const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'><p class="comments">'+f.comments+'</p></div>';                                                    
+                            $(var_data).appendTo('.' + i + '__content');
+                        }                                      
+                 });                                                             
                 });
 
               
@@ -24,7 +31,7 @@ const input_parent__cont = '<div class="variable_container"><span>';
                 }                
                 jscolor.installByClassName("jscolor");   
 
-                // Paste button added
+                // Paste button added and getting the latest color value
                 const paste_button = "<span class='paste_button'>Paste</span>";               
                 const paste_container = $('input.jscolor');                
                 paste_container.after(paste_button);     
@@ -44,9 +51,10 @@ const input_parent__cont = '<div class="variable_container"><span>';
                         console.log(copy_value)
                     }
                 });
+
+                // accordian 
                 let var_title = $('.var_title');
                 let var_content = $('.var_content');                
-
                 var_title.toggleClass('vr-inactive');
                 var_content.toggleClass('vr-closed');                
                 var_title.first().toggleClass('vr-active vr-inactive');
@@ -62,31 +70,33 @@ const input_parent__cont = '<div class="variable_container"><span>';
                         $(this).toggleClass('vr-active vr-inactive');
                         $(this).next().slideToggle().toggleClass('vr-open');
                     }
-                });                    
-                    $('.paste_button').on('click', function(e){                            
-                        if ($(".copy_value").html().length > 0) {
-                            var rgb = [255, 0, 0];
-                            rgb[0] = Math.round(Math.random() * 255);
-                            rgb[1] = Math.round(Math.random() * 255);
-                            rgb[2] = Math.round(Math.random() * 255);
-                              
-                            var o = Math.round(((parseInt(rgb[0]) * 299) +
-                                                (parseInt(rgb[1]) * 587) +
-                                                (parseInt(rgb[2]) * 114)) / 1000);
-                            var fore = (o > 125) ? 'black' : 'white';
-                            var back = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
-                        
-                            var copied_value = $('.copy_value').text();                    
-                            $(this).prev().val(copied_value).css({"background-color": copied_value, "color": fore})                            
-                            e.preventDefault();
-                        }
-                        else{
-                            alert('Please select Value before Pasting')
-                        }                                                                                                                
-                });                
+                }); 
+                
+                // Pasting value copied to input 
+                $('.paste_button').on('click', function(e){                            
+                    if ($(".copy_value").html().length > 0) {
+                        var rgb = [255, 0, 0];
+                        rgb[0] = Math.round(Math.random() * 255);
+                        rgb[1] = Math.round(Math.random() * 255);
+                        rgb[2] = Math.round(Math.random() * 255);
+                            
+                        var o = Math.round(((parseInt(rgb[0]) * 299) +
+                                            (parseInt(rgb[1]) * 587) +
+                                            (parseInt(rgb[2]) * 114)) / 1000);
+                        var fore = (o > 125) ? 'black' : 'white';
+                        var back = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+                    
+                        var copied_value = $('.copy_value').text();                    
+                        $(this).prev().val(copied_value).css({"background-color": copied_value, "color": fore})                            
+                        e.preventDefault();
+                    }
+                    else{
+                        alert('Please select Value before Pasting')
+                    }                                                                                                                
+            });                
         });
 
-
+        // Uploading Image and getting colors from it
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -128,20 +138,32 @@ const input_parent__cont = '<div class="variable_container"><span>';
         $('#upload__file').on('click', function(){
             $('.upload_container').addClass('right_panel--active');
             $('#right_cont').addClass('left_panel--active');
-        })                      
-        document.getElementById("create_file").addEventListener("click", () => {
-            let content='';      
+        })      
         
-            var x = document.querySelectorAll('input[type="text"], select');
-                for(var i in x){       
-                    if(x.length>= parseInt(i)  && x[i].value!=''){
-                        content += x[i].name + ':' +  x[i].value + ';'+'\n';      
-                }}
-                fs.writeFile("_theme.less", content, function(err) {
-                    if(err) {
-                        return console.log(err);
-                    } 
-                console.log("The file was saved!");
+        // Exporting theme file
+        document.getElementById("create_file").addEventListener("click", () => {
+            let content='';                  
+            var billa = document.querySelectorAll('.box__container input[type="text"]');
+            var var__id = document.querySelectorAll('.box__container');
+            for(var var__index in var__id) {
+                var var__id_get = var__id[var__index].id;
+                if(var__id_get != undefined) {
+                    content += '\n'+'//'+var__id_get+'\n';                     
+                    var input__values = document.querySelectorAll('#'+var__id_get+' input[type="text"], select');
+                    for(var i in input__values){       
+                        if(input__values.length>= parseInt(i)  && input__values[i].value!=''){
+                            content += input__values[i].name + ':' +  input__values[i].value + ';'+'\n';      
+                        }                                             
+                    }
+                    
+                }
+            }
+            
+            fs.writeFileSync("_theme.less", content, function(err) {
+                if(err) {
+                    return console.log(err);
+                } 
+            console.log("The file was saved!");
             }); 
         });
         
