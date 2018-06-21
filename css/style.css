@@ -83,19 +83,35 @@ body{
     text-align: right;   
 }
 
-.comments{
+.comments {
+   display: inline-block;
+   vertical-align: top;
+   vertical-align: middle;
+   margin-left: 10px;
+   cursor: help;
+}
+
+.comments span{    
+    background-image: url('../img/info.svg');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+}
+.comments p{
     position: absolute;
-    opacity: 0;
-    visibility: hidden;
     background: rgba(0,0,0,0.9);
     padding: 10px;
     bottom: 37px;
-    left: 0;
+    right: 62px;
     width: auto;
-    border-radius: 5px;
+    font-size: 11px;
+    border-radius: 5px;    
+    opacity: 0;
+    visibility: hidden;    
 }
 
-.variable_container:hover .comments{
+.variable_container .comments:hover p{
     opacity: 1;
     visibility: visible;
 }

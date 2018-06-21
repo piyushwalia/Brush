@@ -17,7 +17,7 @@ const input_parent__cont = '<div class="variable_container"><span class="variabl
                             $(var_data).appendTo('.' + i + '__content');
                         }
                         else{
-                            const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'><p class="comments">'+f.comments+'</p></div>';                                                    
+                            const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'><div class="comments"><span class="info_icon"></span><p>'+f.comments+'</p></div></div>';                                                    
                             $(var_data).appendTo('.' + i + '__content');
                         }                                      
                  });                                                             

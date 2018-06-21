@@ -2,8 +2,7 @@
     "base": [
         {             
             "value": "@page__background-color",
-            "data": "color",
-            "type":"base"             
+            "data": "color"            
         },
         {
             "value": "@font-size__base",
@@ -39,12 +38,12 @@
         {
             "value":"@layout-indent__width",
             "data": "value",
-            "comments" :"Left and Right Padding of the wrapper"
+            "comments" :"Left and Right Padding of the body"
         },
         {
             "value": "@layout__width-xs-indent",
             "data": "value",
-            "comments" :"Left and Right Padding of the wrapper for Mobile"
+            "comments" :"Left and Right Padding of the body for Mobile"
         }
 
     ]   
