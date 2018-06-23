@@ -48,6 +48,9 @@ body{
     padding: 10px;
     width: 100%; 
     transition: all 1s ease;
+    height: 567px;
+    float: left;
+    overflow-y: auto;
 }
 .var_title{
     background: #474b7b;
@@ -71,7 +74,7 @@ body{
     padding: 5px 5px 5px 0px;
     font-size: 12px;
     display: inline-block;
-    width: 40%;
+    width: 45%;
     position: relative;
     margin-bottom: 10px;
 }
@@ -79,7 +82,7 @@ body{
     display: inline-block;
     margin-right: 10px;     
     text-transform: capitalize;  
-    min-width: 150px;
+    width: 200px;
     text-align: right;   
 }
 
@@ -120,6 +123,7 @@ input[type="text"]{
     padding: 5px;
     box-shadow: none;
     border: none;
+    vertical-align:top;
 }
 
 .paste_button{
@@ -254,4 +258,19 @@ footer button{
     border: none;
     font-family: 'robotoregular';
     cursor: pointer;
+}
+
+
+#Layout .variable_container,
+#Buttons .variable_container,
+#PrimaryButton .variable_container
+{
+    width:50%;
+}
+
+#Layout .variable__name,
+#Buttons .variable__name,
+#PrimaryButton .variable__name
+{
+    width:238px;
 }

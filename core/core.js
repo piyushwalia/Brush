@@ -4,6 +4,7 @@ const BrowserWindow = electron.remote.BrowserWindow;
 const fs = require("fs");
 const variables = [];
 const input_parent__cont = '<div class="variable_container"><span class="variable__name">';
+const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Submenu__content .variable__name';
 
  
 
@@ -15,11 +16,22 @@ const input_parent__cont = '<div class="variable_container"><span class="variabl
                         {
                             const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'></div>';                                                    
                             $(var_data).appendTo('.' + i + '__content');
-                        }
-                        else{
-                            const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'><div class="comments"><span class="info_icon"></span><p>'+f.comments+'</p></div></div>';                                                    
-                            $(var_data).appendTo('.' + i + '__content');
-                        }                                      
+                        }                  
+                    else{
+                        const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'><div class="comments"><span class="info_icon"></span><p>'+f.comments+'</p></div></div>';                                                    
+                        $(var_data).appendTo('.' + i + '__content');
+                    }
+                        var desktop_var = /-desktop/gi;
+                        $(desktop_re).contents().each(function() {                            
+                            if (this.nodeType === 3 && desktop_var.test(this.nodeValue)) {
+                                this.nodeValue = this.nodeValue.replace(desktop_var, '');
+                            }
+                        });
+                        jQuery("[data-type='select']").replaceWith(function () {
+                            return jQuery('<select name='+f.value+'><option>true</option><option>false</option></select>', {
+                                html: jQuery(this).html()
+                            });
+                        });                                      
                  });                                                             
                 });
 
@@ -139,19 +151,25 @@ const input_parent__cont = '<div class="variable_container"><span class="variabl
             $('.upload_container').addClass('right_panel--active');
             $('#right_cont').addClass('left_panel--active');
         })      
+
+
+        // Variables extra data added for reference
         
+
+   
+
+
         // Exporting theme file
         document.getElementById("create_file").addEventListener("click", () => {
-            let content='';                  
-            var billa = document.querySelectorAll('.box__container input[type="text"]');
+            let content='';                               
             var var__id = document.querySelectorAll('.box__container');
             for(var var__index in var__id) {
                 var var__id_get = var__id[var__index].id;
                 if(var__id_get != undefined) {
-                    content += '\n'+'//'+var__id_get+'\n';                     
-                    var input__values = document.querySelectorAll('#'+var__id_get+' input[type="text"], select');
+                    content += '\n'+'//'+var__id_get+'\n';                      
+                    var input__values = document.querySelectorAll('#'+var__id_get+' input[type="text"] , #'+var__id_get+' select' );
                     for(var i in input__values){       
-                        if(input__values.length>= parseInt(i)  && input__values[i].value!=''){
+                        if(input__values.length>= parseInt(i)  && input__values[i].value!='' && input__values[i].value!='true'){
                             content += input__values[i].name + ':' +  input__values[i].value + ';'+'\n';      
                         }                                             
                     }

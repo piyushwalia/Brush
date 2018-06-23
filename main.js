@@ -18,7 +18,7 @@ let mainWindow;
 app.on('ready', function(){
 
     mainWindow = new BrowserWindow({            
-        width:1000,
+        width:1050,
         height:700
     });
     mainWindow.loadURL(url.format({

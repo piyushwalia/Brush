@@ -6,7 +6,7 @@
         },
         {
             "value": "@font-size__base",
-            "data": "font"            
+            "data": "select"            
         },
         {
             "value": "@text__color",
@@ -32,8 +32,7 @@
     "Layout":[
         { 
             "value":"@layout__max-width",
-            "data": "value",
-            "type": "layout"
+            "data": "value"            
         },
         {
             "value":"@layout-indent__width",
@@ -44,9 +43,284 @@
             "value": "@layout__width-xs-indent",
             "data": "value",
             "comments" :"Left and Right Padding of the body for Mobile"
+        },
+        {
+            "value": "@layout-column__sidebar-width",
+            "data": "value",
+            "comments" :"Width of the Sidebar column for Category Page"
+        },
+        {
+            "value": "@layout-column-checkout__width-left",
+            "data": "value",
+            "comments" :"Checkout Page Column Width"
         }
-
-    ]   
+    ],
+    "Button":[
+        { 
+            "value":"@button__font-size",
+            "data": "value"            
+        },
+        {
+            "value":"@button__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@button__line-height",
+            "data": "value"           
+        },
+        {
+            "value": "@button__margin",
+            "data": "value"            
+        },
+        {
+            "value": "@button__padding",
+            "data": "value",
+            "comments" :"Leave blank when buttons don't depend on side paddings or have fixed width"
+        },
+        {
+            "value": "@button__width",
+            "data": "value",
+            "comments" :"Leave blank when buttons depend on side paddings or to fixed value when needed"
+        },
+        {
+            "value": "@button__border-radius",
+            "data": "value"            
+        },
+        {
+            "value": "@button__disabled__opacity",
+            "data": "value",
+            "comments" :"Default value is .5, Leave blank if you want to keep the default value"
+        },
+        {
+            "value": "@button__color",
+            "data": "color"            
+        },
+        {
+            "value": "@button__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button__gradient-color-start",
+            "data": "color",
+            "comments" :"Leave blank if you don't want Gradiant button"
+        },
+        {
+            "value": "@button__gradient-color-end",
+            "data": "color",
+            "comments" :"Leave blank if you don't want Gradiant button"
+        },
+        {
+            "value": "@button__hover__color",
+            "data": "color"            
+        },
+        {
+            "value": "@button__hover__background",
+            "data": "color"            
+        },
+        {
+            "value": "@button__hover__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button__hover__gradient-color-start",
+            "data": "color"            
+        },
+        {
+            "value": "@button__hover__gradient-color-end",
+            "data": "color"            
+        },
+        {
+            "value": "@button__font-size__l",
+            "data": "value",
+            "comments" :"Large Buttons Like Checkout Page button"            
+        },
+        {
+            "value": "@button__padding__l",
+            "data": "value",
+            "comments" :"Large button padding"                        
+        },
+        {
+            "value": "@button__font-size__s",
+            "data": "value",
+            "comments" :"Small Buttons"            
+        },
+        {
+            "value": "@button__padding__s",
+            "data": "value",
+            "comments" :"Small button padding"                                    
+        }      
+    ],
+    "PrimaryButton":[
+        { 
+            "value":"@button-primary__font-size",
+            "data": "value"            
+        },
+        {
+            "value":"@button-primary__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@button-primary__background",
+            "data": "color"          
+        },
+        {
+            "value": "@button-primary__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button-primary__gradient-color-start",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__gradient-color-end",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__hover__background",
+            "data": "color"          
+        },
+        {
+            "value": "@button-primary__hover__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button-primary__hover__color",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__hover__gradient-color-start",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__hover__gradient-color-end",
+            "data": "color"            
+        }
+    ],
+    "Desktop_Navigation":[
+        { 
+            "value":"@navigation-desktop__background",
+            "data": "color"            
+        },
+        {
+            "value":"@navigation-desktop__border",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop__font-size",
+            "data": "value"          
+        },
+        {
+            "value": "@navigation-desktop__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__line-height",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__margin",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__padding",
+            "data": "value"          
+        },
+        {
+            "value": "@navigation-desktop-level0-item__background",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__border",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__color",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__hover__background",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__hover__border",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__hover__color",
+            "data": "color"            
+        }        
+    ],
+    "Desktop_Submenu": [
+        {
+            "value": "@submenu-desktop__background",
+            "data": "color"            
+        },
+        {
+            "value": "@submenu-desktop__border-width",
+            "data": "value",
+            "comments": "By default, border is kept solid"            
+        },
+        {
+            "value": "@submenu-desktop__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@submenu-desktop__box-shadow",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__min-width",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__padding",
+            "data": "value"            
+        }     
+    ],
+    "Desktop_Submenu_Arrow": [
+        {
+            "value": "@submenu-desktop-arrow",
+            "data": "select",
+            "comments":"By default, the value is true, if you want to disable the arrows, select false"            
+        },
+        {
+            "value": "@submenu-desktop__border-width",
+            "data": "value",
+            "comments": "By default, border is kept solid"            
+        },
+        {
+            "value": "@submenu-desktop__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@submenu-desktop__box-shadow",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__min-width",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__padding",
+            "data": "value"            
+        }     
+    ]
  }
 
 
