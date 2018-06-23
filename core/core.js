@@ -84,7 +84,7 @@ const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Subme
                     }
                 }); 
                 
-                // Pasting value copied to input 
+                // Pasting value copied to input and changing color according to text entered
                 $('.paste_button').on('click', function(e){                            
                     if ($(".copy_value").html().length > 0) {
                         var rgb = [255, 0, 0];

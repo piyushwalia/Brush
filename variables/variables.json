@@ -6,7 +6,7 @@
         },
         {
             "value": "@font-size__base",
-            "data": "select"            
+            "data": "value"            
         },
         {
             "value": "@text__color",
@@ -292,34 +292,15 @@
             "comments":"By default, the value is true, if you want to disable the arrows, select false"            
         },
         {
-            "value": "@submenu-desktop__border-width",
+            "value": "@submenu-desktop-arrow__size",
             "data": "value",
-            "comments": "By default, border is kept solid"            
+            "comments":"By default, the value is 10px"                                
         },
         {
-            "value": "@submenu-desktop__border-color",
-            "data": "color"            
-        },
-        {
-            "value": "@submenu-desktop__box-shadow",
-            "data": "value"            
-        },
-        {
-            "value": "@submenu-desktop__font-size",
-            "data": "value"            
-        },
-        {
-            "value": "@submenu-desktop__font-weight",
-            "data": "value"            
-        },
-        {
-            "value": "@submenu-desktop__min-width",
-            "data": "value"            
-        },
-        {
-            "value": "@submenu-desktop__padding",
-            "data": "value"            
-        }     
+            "value": "@submenu-desktop-arrow__left",
+            "data": "value",
+            "comments":"By default, the value is 20px"                                            
+        }
     ]
  }
 
