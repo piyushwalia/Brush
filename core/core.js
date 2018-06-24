@@ -10,13 +10,14 @@ const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Subme
 
         $.getJSON('./variables/variables.json', function(data) {                               
                 $.each(data, function(i,value){                    
-                     $('#right_cont').append('<div id='+i+' class="box__container"><h2 class="var_title">'+i+'</h2><div class=" '+i+'__content  var_content"></div></div>');                                             
-                     $.each(this, function(b, f) {                      
-                     if (jQuery.isEmptyObject(f.comments))
+                    $('#right_cont').append('<div id='+i+' class="box__container"><h2 class="var_title">'+i+'</h2><div class=" '+i+'__content  var_content"></div></div>');                                             
+                    $.each(this, function(b, f) {                      
+                    if (jQuery.isEmptyObject(f.comments))
                         {
                             const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'></div>';                                                    
                             $(var_data).appendTo('.' + i + '__content');
-                        }                  
+                        } 
+                                                              
                     else{
                         const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'><div class="comments"><span class="info_icon"></span><p>'+f.comments+'</p></div></div>';                                                    
                         $(var_data).appendTo('.' + i + '__content');
@@ -27,9 +28,9 @@ const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Subme
                                 this.nodeValue = this.nodeValue.replace(desktop_var, '');
                             }
                         });
-                        jQuery("[data-type='select']").replaceWith(function () {
-                            return jQuery('<select name='+f.value+'><option>true</option><option>false</option></select>', {
-                                html: jQuery(this).html()
+                        $("[data-type='select']").replaceWith(function () {
+                            return $('<select name='+f.value+'><option>true</option><option>false</option></select>', {
+                                html: $(this).html()
                             });
                         });                                      
                  });                                                             
