@@ -1,12 +1,14 @@
 const electron = require('electron')
 const path = require('path')
+const os = require('os');
 const BrowserWindow = electron.remote.BrowserWindow;
 const fs = require("fs");
 const variables = [];
 const input_parent__cont = '<div class="variable_container"><span class="variable__name">';
 const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Submenu__content .variable__name';
 
- 
+console.log(process.env.PATH)
+
 
         $.getJSON('./variables/variables.json', function(data) {                               
                 $.each(data, function(i,value){                    
@@ -22,21 +24,21 @@ const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Subme
                         const var_data = input_parent__cont +f.value.slice(1).replace(/[_\s]/g, ' ')+'</span><input type="text" name='+f.value+'  data-type='+f.data+'><div class="comments"><span class="info_icon"></span><p>'+f.comments+'</p></div></div>';                                                    
                         $(var_data).appendTo('.' + i + '__content');
                     }
-                        var desktop_var = /-desktop/gi;
-                        $(desktop_re).contents().each(function() {                            
-                            if (this.nodeType === 3 && desktop_var.test(this.nodeValue)) {
-                                this.nodeValue = this.nodeValue.replace(desktop_var, '');
-                            }
+                    var desktop_var = /-desktop/gi;
+                    $(desktop_re).contents().each(function() {                            
+                        if (this.nodeType === 3 && desktop_var.test(this.nodeValue)) {
+                            this.nodeValue = this.nodeValue.replace(desktop_var, '');
+                        }
+                    });
+                    $("[data-type='select']").replaceWith(function () {
+                        return $('<select name='+f.value+'><option>true</option><option>false</option></select>', {
+                            html: $(this).html()
                         });
-                        $("[data-type='select']").replaceWith(function () {
-                            return $('<select name='+f.value+'><option>true</option><option>false</option></select>', {
-                                html: $(this).html()
-                            });
-                        });                                      
+                    });                                                         
                  });                                                             
                 });
 
-              
+          
                 
                 const list = document.querySelectorAll("[data-type='color']");
                 for (let i = list.length; i--;) {
@@ -70,9 +72,9 @@ const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Subme
                 let var_content = $('.var_content');                
                 var_title.toggleClass('vr-inactive');
                 var_content.toggleClass('vr-closed');                
-                var_title.first().toggleClass('vr-active vr-inactive');
-                var_content.first().toggleClass('vr-open vr-closed').slideDown();
-                var_title.click(function () {
+                // var_title.first().toggleClass('vr-active vr-inactive');
+                 var_title.click(function () {
+                // var_content.first().toggleClass('vr-open vr-closed').slideDown();
                     if($(this).is('.vr-inactive')) {
                         $('.vr-active').toggleClass('vr-active vr-inactive').next().slideToggle().toggleClass('vr-open');
                         $(this).toggleClass('vr-active vr-inactive');

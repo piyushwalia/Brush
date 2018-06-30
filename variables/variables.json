@@ -473,7 +473,7 @@
     "dropdowns": [
         {
             "value": "@dropdown-list__background",
-            "data": "value"            
+            "data": "color"            
         },
         {
             "value": "@dropdown-list__border",
@@ -492,18 +492,81 @@
             "data": "value"            
         },
         {
-            "value": "@dropdown-list__pointer",
-            "data": "select"            
+            "value": "@dropdown-list-pointer__position",
+            "data": "value",
+            "comments": "Left | Right"            
         },
         {
-            "value": "@dropdown-list__pointer",
-            "data": "select"            
+            "value": "@dropdown-list-pointer__position-top",
+            "data": "value"            
         },
         {
-            "value": "@dropdown-list__pointer",
-            "data": "select"            
+            "value": "@dropdown-list-pointer__position-left-right",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__border",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__padding",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__margin",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__hover",
+            "data": "value"            
         }
-    ]
+    ],
+    "Forms": [
+        {
+            "value": "@form-element-input__background",
+            "data": "color"            
+        },
+        {
+            "value": "@form-element-input__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@form-element-input__border-radius",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__height",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__width",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__padding",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__font-size",
+            "data": "value"
+        },
+        {
+            "value": "@form-element-input__color",
+            "data": "color"            
+        },
+        {
+            "value": "@form-element-input__font-family",
+            "data": "value"
+        },
+        {
+            "value": "@form-element-input__line-height",
+            "data": "value"
+        },
+        {
+            "value": "@form-element-input-placeholder__color",
+            "data": "value"
+        }        
+    ]    
  }
 
 
