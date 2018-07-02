@@ -2,7 +2,7 @@
     "base": [        
         {             
             "value": "@page__background-color",
-            "data": "color"          
+            "data": "color"            
         },
         {
             "value": "@font-size__base",
@@ -521,7 +521,7 @@
             "data": "value"            
         }
     ],
-    "Forms": [
+    "forms": [
         {
             "value": "@form-element-input__background",
             "data": "color"            
@@ -565,7 +565,223 @@
         {
             "value": "@form-element-input-placeholder__color",
             "data": "value"
+        },
+        {
+            "value": "@form-validation-note__color-error",
+            "data": "color"
+        },
+        {
+            "value": "@form-validation-note__font-size",
+            "data": "value"
+        },
+        {
+            "value": "@form-field-type-label-inline__width",
+            "data": "value"
+        },
+        {
+            "value": "@form-field-type-control-inline__width",
+            "data": "value"
+        },
+        {
+            "value": "@form-field-type-label-inline__align",
+            "data": "value",
+            "comments": "right or left"
         }        
+    ],
+    "messages": [
+        {
+            "value": "@message__padding",
+            "data": "value"            
+        },        
+        {
+            "value": "@message__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@message-info__color",
+            "data": "color",
+            "comments": "Information Message"                                                     
+        },
+        {
+            "value": "@message-info__background",
+            "data": "color",
+            "comments": "Information Message"                                                     
+        },
+        {
+            "value": "@message-info__border-color",
+            "data": "color",
+            "comments": "Information Message"                                                     
+        },
+        {
+            "value": "@message-warning__color",
+            "data": "color",
+            "comments": "Warning Message"                                                     
+        },
+        {
+            "value": "@message-warning__background",
+            "data": "color",
+            "comments": "Warning Message"                                                     
+        },
+        {
+            "value": "@message-warning__border-color",
+            "data": "color",
+            "comments": "Warning Message"                                                     
+        },
+        {
+            "value": "@message-error__color",
+            "data": "color",
+            "comments": "Error Message"                                                     
+        },
+        {
+            "value": "@message-error__background",
+            "data": "color",
+            "comments": "Error Message"                                                     
+        },
+        {
+            "value": "@message-error__border-color",
+            "data": "color",
+            "comments": "Error Message"                                                     
+        },
+        {
+            "value": "@message-success__color",
+            "data": "color",
+            "comments": "Success Message"                                                     
+        },
+        {
+            "value": "@message-success__background",
+            "data": "color",
+            "comments": "Success Message"                                                     
+        },
+        {
+            "value": "@message-success__border-color",
+            "data": "color",
+            "comments": "Success Message"                                                     
+        },
+        {
+            "value": "@message-notice__color",
+            "data": "color",
+            "comments": "Notice Message"                                                     
+        },
+        {
+            "value": "@message-notice__background:",
+            "data": "color",
+            "comments": "Notice Message"                                                     
+        },
+        {
+            "value": "@message-notice__border-color",
+            "data": "color",
+            "comments": "Notice Message"                                                     
+        }           
+    ],
+    "pager": [
+        {
+            "value": "@pager__color",
+            "data": "color"
+        },
+        {
+            "value": "@pager__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@pager__line-height",
+            "data": "value",
+            "comments":"By default, the value is 32px"                                
+        }, 
+        {
+            "value": "@pager-item__padding",
+            "data": "value",
+            "comments":"By default, the value is 0 4px"                                            
+        }, 
+        {
+            "value": "@pager-current__font-weight",
+            "data": "value"            
+        }, 
+        {
+            "value": "@pager-current__color",
+            "data": "value"            
+        }
+    ],
+    "popup": [
+        {
+            "value": "@popup__padding",
+            "data": "value"
+        },
+        {
+            "value": "@popup__background",
+            "data": "color"            
+        },
+        {
+            "value": "@popup__border",
+            "data": "value"            
+        }, 
+        {
+            "value": "@popup__shadow",
+            "data": "value",
+            "comments":"By default, the value is 0 3px 3px rgba(0,0,0,.15)"                                            
+        }, 
+        {
+            "value": "@popup__fade",
+            "data": "value",
+            "comments": "opacity .3s linear"            
+        }, 
+        {
+            "value": "@popup-header__margin",
+            "data": "value"            
+        }, 
+        {
+            "value": "@popup-icon-font__size",
+            "data": "value"            
+        }, 
+        {
+            "value": "@popup-icon-font__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@popup-icon-font__color-hover",
+            "data": "color"            
+        }, 
+        {
+            "value": "@overlay__background",
+            "data": "color"            
+        }, 
+        {
+            "value": "@overlay__opacity",
+            "data": "value"            
+        },         
+        {
+            "value": "@overlay__opacity-old",
+            "data": "value",
+            "comments":"50"            
+        }, 
+        {
+            "value": "@overlay__fade",
+            "data": "color",
+            "comments": "opacity .15s linear"            
+        }
+    ],
+    "rating": [
+        {
+            "value": "@rating-icon__count",
+            "data": "value",
+            "comments":"By default, the value is 5"
+        },
+        {
+            "value": "@rating-icon__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@rating-icon__letter-spacing",
+            "data": "value",
+            "comments":"By default, the value is -10px"                                
+        }, 
+        {
+            "value": "@rating-icon__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@rating-icon__active__color",
+            "data": "color"            
+        }
     ]    
  }
 

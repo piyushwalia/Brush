@@ -6,6 +6,7 @@ const fs = require("fs");
 const variables = [];
 const input_parent__cont = '<div class="variable_container"><span class="variable__name">';
 const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Submenu__content .variable__name';
+const forms_elem = '.forms__content .variable__name';
 
 console.log(process.env.PATH)
 
@@ -30,6 +31,12 @@ console.log(process.env.PATH)
                             this.nodeValue = this.nodeValue.replace(desktop_var, '');
                         }
                     });
+                    var forms_var = /form-element-/gi;
+                    $(forms_elem).contents().each(function() {                            
+                        if (this.nodeType === 3 && forms_var.test(this.nodeValue)) {
+                            this.nodeValue = this.nodeValue.replace(forms_var, '');
+                        }
+                    });
                     $("[data-type='select']").replaceWith(function () {
                         return $('<select name='+f.value+'><option>true</option><option>false</option></select>', {
                             html: $(this).html()
@@ -46,7 +53,7 @@ console.log(process.env.PATH)
                 }                
                 jscolor.installByClassName("jscolor");   
 
-                // Paste button added and getting the latest color value
+                // Paste button added and getting the updated color value
                 const paste_button = "<span class='paste_button'>Paste</span>";               
                 const paste_container = $('input.jscolor');                
                 paste_container.after(paste_button);     
