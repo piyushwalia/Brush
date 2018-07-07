@@ -782,6 +782,133 @@
             "value": "@rating-icon__active__color",
             "data": "color"            
         }
+    ],
+    "tabs": [
+        {
+            "value": "@tab-control__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@tab-control__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@tab-control__height",
+            "data": "value"                                        
+        }, 
+        {
+            "value": "@tab-control__margin-right",
+            "data": "value"            
+        }, 
+        {
+            "value": "@tab-control__padding-top",
+            "data": "value",
+            "comments": "Padding bottom will have the same value as top"            
+        }, 
+        {
+            "value": "@tab-control__padding-right",
+            "data": "value",
+            "comments": "Padding left will have the same value as right"                        
+        }, 
+        {
+            "value": "@tab-control__border-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__border-width",
+            "data": "value",
+            "comments": "Padding bottom will have the same value as top"            
+        }, 
+        {
+            "value": "@tab-control__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__hover__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__hover__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__active__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__active__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-content__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-content__padding-top",
+            "data": "value"            
+        }, 
+        {
+            "value": "@tab-content__padding-right",
+            "data": "value"            
+        }
+    ],
+    "accordions": [
+        {
+            "value": "@accordion-control__font-size",
+            "data": "value"
+        },
+        {
+            "value": "@accordion-control__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@accordion-control__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-control__color",
+            "data": "color"                                                     
+        }, 
+        {
+            "value": "@accordion-control__height",
+            "data": "value"            
+        }, 
+        {
+            "value": "@accordion-control__padding-top",
+            "data": "value"            
+        }, 
+        {
+            "value": "@accordion-control__padding-right",
+            "data": "value"                                                     
+        }, 
+        {
+            "value": "@accordion-control__hover__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-control__hover__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-control__active__background-color",
+            "data": "color"                                                     
+        },         
+        {
+            "value": "@accordion-control__active__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-content__background-color",
+            "data": "color"                                                     
+        },         
+        {
+            "value": "@accordion-content__border",
+            "data": "value"            
+        }
     ]    
  }
 
