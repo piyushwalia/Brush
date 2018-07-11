@@ -1,0 +1,1000 @@
+{
+    "base": [        
+        {             
+            "value": "@page__background-color",
+            "data": "color"            
+        },
+        {
+            "value": "@font-size__base",
+            "data": "value"            
+        },
+        {
+            "value": "@text__color",
+            "data": "color"
+        },
+        {
+            "value": "@link__color",
+            "data": "color"
+        },
+        {
+            "value": "@link__visited__color",
+            "data": "color"
+        },
+        {
+            "value": "@link__hover__color",
+            "data": "color"
+        },
+        {
+            "value": "@link__active__color",
+            "data": "color"
+        }               
+    ],
+    "Layout":[
+        { 
+            "value":"@layout__max-width",
+            "data": "value"            
+        },
+        {
+            "value":"@layout-indent__width",
+            "data": "value",
+            "comments" :"Left and Right Padding of the body"
+        },
+        {
+            "value": "@layout__width-xs-indent",
+            "data": "value",
+            "comments" :"Left and Right Padding of the body for Mobile"
+        },
+        {
+            "value": "@layout-column__sidebar-width",
+            "data": "value",
+            "comments" :"Width of the Sidebar column for Category Page"
+        },
+        {
+            "value": "@layout-column-checkout__width-left",
+            "data": "value",
+            "comments" :"Checkout Page Column Width"
+        }
+    ],
+    "Button":[
+        { 
+            "value":"@button__font-size",
+            "data": "value"            
+        },
+        {
+            "value":"@button__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@button__line-height",
+            "data": "value"           
+        },
+        {
+            "value": "@button__margin",
+            "data": "value"            
+        },
+        {
+            "value": "@button__padding",
+            "data": "value",
+            "comments" :"Leave blank when buttons don't depend on side paddings or have fixed width"
+        },
+        {
+            "value": "@button__width",
+            "data": "value",
+            "comments" :"Leave blank when buttons depend on side paddings or to fixed value when needed"
+        },
+        {
+            "value": "@button__border-radius",
+            "data": "value"            
+        },
+        {
+            "value": "@button__disabled__opacity",
+            "data": "value",
+            "comments" :"Default value is .5, Leave blank if you want to keep the default value"
+        },
+        {
+            "value": "@button__color",
+            "data": "color"            
+        },
+        {
+            "value": "@button__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button__gradient-color-start",
+            "data": "color",
+            "comments" :"Leave blank if you don't want Gradiant button"
+        },
+        {
+            "value": "@button__gradient-color-end",
+            "data": "color",
+            "comments" :"Leave blank if you don't want Gradiant button"
+        },
+        {
+            "value": "@button__hover__color",
+            "data": "color"            
+        },
+        {
+            "value": "@button__hover__background",
+            "data": "color"            
+        },
+        {
+            "value": "@button__hover__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button__hover__gradient-color-start",
+            "data": "color"            
+        },
+        {
+            "value": "@button__hover__gradient-color-end",
+            "data": "color"            
+        },
+        {
+            "value": "@button__font-size__l",
+            "data": "value",
+            "comments" :"Large Buttons Like Checkout Page button"            
+        },
+        {
+            "value": "@button__padding__l",
+            "data": "value",
+            "comments" :"Large button padding"                        
+        },
+        {
+            "value": "@button__font-size__s",
+            "data": "value",
+            "comments" :"Small Buttons"            
+        },
+        {
+            "value": "@button__padding__s",
+            "data": "value",
+            "comments" :"Small button padding"                                    
+        }      
+    ],
+    "PrimaryButton":[
+        { 
+            "value":"@button-primary__font-size",
+            "data": "value"            
+        },
+        {
+            "value":"@button-primary__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@button-primary__background",
+            "data": "color"          
+        },
+        {
+            "value": "@button-primary__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button-primary__gradient-color-start",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__gradient-color-end",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__hover__background",
+            "data": "color"          
+        },
+        {
+            "value": "@button-primary__hover__border",
+            "data": "value"            
+        },
+        {
+            "value": "@button-primary__hover__color",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__hover__gradient-color-start",
+            "data": "color"            
+        },
+        {
+            "value": "@button-primary__hover__gradient-color-end",
+            "data": "color"            
+        }
+    ],
+    "Navigation": [
+        {
+            "value": "@navigation__background",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation__border",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-level0-item__font-size",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@navigation-level0-item__font-weight",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@navigation-level0-item__margin",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@navigation-level0-item__padding",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@navigation-level0-item__text-transform",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@navigation-level0-item__background",
+            "data": "color"                                                     
+        },
+        {
+            "value": "@navigation-level0-item__border",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@navigation-level0-item__color",
+            "data": "color"                                                     
+        }
+    ],
+    "Navigation_active": [
+        {
+            "value": "@navigation-level0-item__active__background",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-level0-item__active__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-level0-item__active__border-width",
+            "data": "value",
+            "comments": "By default, the value is 0 0 0 8px"
+
+        },
+        {
+            "value": "@navigation-level0-item__active__color",
+            "data": "color"                                                     
+        }        
+    ],
+    "Navigation_Submenu": [
+        {
+            "value": "@submenu__background",
+            "data": "color"            
+        },
+        {
+            "value": "@submenu__border",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu__padding-top",
+            "data": "value"            
+
+        },
+        {
+            "value": "@submenu__padding-right",
+            "data": "value",
+            "comments":"By default, the value is 0"                                                     
+        },
+        {
+            "value": "@submenu__padding-bottom",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu__padding-left",
+            "data": "value",
+            "comments":"By default, the value is 15px"                                                     
+        },
+        {
+            "value": "@submenu__font-size:",
+            "data": "value"
+        },
+        {
+            "value": "@submenu__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-item__line-height",
+            "data": "value",
+            "comments":"By default, the value is 1.3"                                                     
+        },
+        {
+            "value": "@submenu-item__background",
+            "data": "color"
+        },
+        {
+            "value": "@submenu-item__border",
+            "data": "value"
+        },
+        {
+            "value": "@submenu-item__color",
+            "data": "color"
+        },
+        {
+            "value": "@submenu-item__active__background",
+            "data": "color"
+        },
+        {
+            "value": "@submenu-item__active__border",
+            "data": "value",
+            "comments":"by default, the value is 8px"
+        },
+        {
+            "value": "@submenu-item__active__border-color",
+            "data": "color"
+        },
+        {
+            "value": "@submenu-item__active__border-width",
+            "data": "value",
+            "comments":"By default, the value is 0 0 0 8px"
+        },
+        {
+            "value": "@submenu-item__active__color",
+            "data": "color"
+        }                
+    ],
+    "Desktop_Navigation":[
+        { 
+            "value":"@navigation-desktop__background",
+            "data": "color"            
+        },
+        {
+            "value":"@navigation-desktop__border",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop__font-size",
+            "data": "value"          
+        },
+        {
+            "value": "@navigation-desktop__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__line-height",
+            "data": "value"            
+        }, 
+        {
+            "value": "@navigation-desktop-level0-item__margin",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__padding",
+            "data": "value"          
+        },
+        {
+            "value": "@navigation-desktop-level0-item__background",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__border",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__color",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__hover__background",
+            "data": "color"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__hover__border",
+            "data": "value"            
+        },
+        {
+            "value": "@navigation-desktop-level0-item__hover__color",
+            "data": "color"            
+        }        
+    ],
+    "Desktop_Submenu": [
+        {
+            "value": "@submenu-desktop__background",
+            "data": "color"            
+        },
+        {
+            "value": "@submenu-desktop__border-width",
+            "data": "value",
+            "comments": "By default, border is kept solid"            
+        },
+        {
+            "value": "@submenu-desktop__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@submenu-desktop__box-shadow",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__min-width",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop__padding",
+            "data": "value"            
+        }     
+    ],
+    "Desktop_Submenu_Arrow": [
+        {
+            "value": "@submenu-desktop-arrow",
+            "data": "select",
+            "comments":"By default, the value is true, if you want to disable the arrows, select false"            
+        },
+        {
+            "value": "@submenu-desktop-arrow__size",
+            "data": "value",
+            "comments":"By default, the value is 10px"                                
+        },
+        {
+            "value": "@submenu-desktop-arrow__left",
+            "data": "value",
+            "comments":"By default, the value is 20px"                                            
+        }
+    ],
+    "Desktop_Submenu_item": [
+        {
+            "value": "@submenu-desktop-item__padding",
+            "data": "value"            
+        },
+        {
+            "value": "@submenu-desktop-item__background",
+            "data": "color"            
+        },
+        {
+            "value": "@submenu-desktop-item__border",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@submenu-desktop-item__color",
+            "data": "color"                                                     
+        },
+        {
+            "value": "@submenu-desktop-item__hover__background",
+            "data": "color"                                                     
+        },
+        {
+            "value": "@submenu-desktop-item__hover__border",
+            "data": "value"                                                     
+        },
+        {
+            "value": "@submenu-desktop-item__hover__color",
+            "data": "color"                                                     
+        }
+    ],
+    "dropdowns": [
+        {
+            "value": "@dropdown-list__background",
+            "data": "color"            
+        },
+        {
+            "value": "@dropdown-list__border",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list__shadow",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list__pointer",
+            "data": "select"            
+        },
+        {
+            "value": "@dropdown-list-pointer__border",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-pointer__position",
+            "data": "value",
+            "comments": "Left | Right"            
+        },
+        {
+            "value": "@dropdown-list-pointer__position-top",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-pointer__position-left-right",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__border",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__padding",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__margin",
+            "data": "value"            
+        },
+        {
+            "value": "@dropdown-list-item__hover",
+            "data": "value"            
+        }
+    ],
+    "forms": [
+        {
+            "value": "@form-element-input__background",
+            "data": "color"            
+        },
+        {
+            "value": "@form-element-input__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@form-element-input__border-radius",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__height",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__width",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__padding",
+            "data": "value"            
+        },
+        {
+            "value": "@form-element-input__font-size",
+            "data": "value"
+        },
+        {
+            "value": "@form-element-input__color",
+            "data": "color"            
+        },
+        {
+            "value": "@form-element-input__font-family",
+            "data": "value"
+        },
+        {
+            "value": "@form-element-input__line-height",
+            "data": "value"
+        },
+        {
+            "value": "@form-element-input-placeholder__color",
+            "data": "value"
+        },
+        {
+            "value": "@form-validation-note__color-error",
+            "data": "color"
+        },
+        {
+            "value": "@form-validation-note__font-size",
+            "data": "value"
+        },
+        {
+            "value": "@form-field-type-label-inline__width",
+            "data": "value"
+        },
+        {
+            "value": "@form-field-type-control-inline__width",
+            "data": "value"
+        },
+        {
+            "value": "@form-field-type-label-inline__align",
+            "data": "value",
+            "comments": "right or left"
+        }        
+    ],
+    "messages": [
+        {
+            "value": "@message__padding",
+            "data": "value"            
+        },        
+        {
+            "value": "@message__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@message-info__color",
+            "data": "color",
+            "comments": "Information Message"                                                     
+        },
+        {
+            "value": "@message-info__background",
+            "data": "color",
+            "comments": "Information Message"                                                     
+        },
+        {
+            "value": "@message-info__border-color",
+            "data": "color",
+            "comments": "Information Message"                                                     
+        },
+        {
+            "value": "@message-warning__color",
+            "data": "color",
+            "comments": "Warning Message"                                                     
+        },
+        {
+            "value": "@message-warning__background",
+            "data": "color",
+            "comments": "Warning Message"                                                     
+        },
+        {
+            "value": "@message-warning__border-color",
+            "data": "color",
+            "comments": "Warning Message"                                                     
+        },
+        {
+            "value": "@message-error__color",
+            "data": "color",
+            "comments": "Error Message"                                                     
+        },
+        {
+            "value": "@message-error__background",
+            "data": "color",
+            "comments": "Error Message"                                                     
+        },
+        {
+            "value": "@message-error__border-color",
+            "data": "color",
+            "comments": "Error Message"                                                     
+        },
+        {
+            "value": "@message-success__color",
+            "data": "color",
+            "comments": "Success Message"                                                     
+        },
+        {
+            "value": "@message-success__background",
+            "data": "color",
+            "comments": "Success Message"                                                     
+        },
+        {
+            "value": "@message-success__border-color",
+            "data": "color",
+            "comments": "Success Message"                                                     
+        },
+        {
+            "value": "@message-notice__color",
+            "data": "color",
+            "comments": "Notice Message"                                                     
+        },
+        {
+            "value": "@message-notice__background:",
+            "data": "color",
+            "comments": "Notice Message"                                                     
+        },
+        {
+            "value": "@message-notice__border-color",
+            "data": "color",
+            "comments": "Notice Message"                                                     
+        }           
+    ],
+    "pager": [
+        {
+            "value": "@pager__color",
+            "data": "color"
+        },
+        {
+            "value": "@pager__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@pager__line-height",
+            "data": "value",
+            "comments":"By default, the value is 32px"                                
+        }, 
+        {
+            "value": "@pager-item__padding",
+            "data": "value",
+            "comments":"By default, the value is 0 4px"                                            
+        }, 
+        {
+            "value": "@pager-current__font-weight",
+            "data": "value"            
+        }, 
+        {
+            "value": "@pager-current__color",
+            "data": "value"            
+        }
+    ],
+    "popup": [
+        {
+            "value": "@popup__padding",
+            "data": "value"
+        },
+        {
+            "value": "@popup__background",
+            "data": "color"            
+        },
+        {
+            "value": "@popup__border",
+            "data": "value"            
+        }, 
+        {
+            "value": "@popup__shadow",
+            "data": "value",
+            "comments":"By default, the value is 0 3px 3px rgba(0,0,0,.15)"                                            
+        }, 
+        {
+            "value": "@popup__fade",
+            "data": "value",
+            "comments": "opacity .3s linear"            
+        }, 
+        {
+            "value": "@popup-header__margin",
+            "data": "value"            
+        }, 
+        {
+            "value": "@popup-icon-font__size",
+            "data": "value"            
+        }, 
+        {
+            "value": "@popup-icon-font__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@popup-icon-font__color-hover",
+            "data": "color"            
+        }, 
+        {
+            "value": "@overlay__background",
+            "data": "color"            
+        }, 
+        {
+            "value": "@overlay__opacity",
+            "data": "value"            
+        },         
+        {
+            "value": "@overlay__opacity-old",
+            "data": "value",
+            "comments":"50"            
+        }, 
+        {
+            "value": "@overlay__fade",
+            "data": "color",
+            "comments": "opacity .15s linear"            
+        }
+    ],
+    "rating": [
+        {
+            "value": "@rating-icon__count",
+            "data": "value",
+            "comments":"By default, the value is 5"
+        },
+        {
+            "value": "@rating-icon__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@rating-icon__letter-spacing",
+            "data": "value",
+            "comments":"By default, the value is -10px"                                
+        }, 
+        {
+            "value": "@rating-icon__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@rating-icon__active__color",
+            "data": "color"            
+        }
+    ],
+    "tabs": [
+        {
+            "value": "@tab-control__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@tab-control__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@tab-control__height",
+            "data": "value"                                        
+        }, 
+        {
+            "value": "@tab-control__margin-right",
+            "data": "value"            
+        }, 
+        {
+            "value": "@tab-control__padding-top",
+            "data": "value",
+            "comments": "Padding bottom will have the same value as top"            
+        }, 
+        {
+            "value": "@tab-control__padding-right",
+            "data": "value",
+            "comments": "Padding left will have the same value as right"                        
+        }, 
+        {
+            "value": "@tab-control__border-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__border-width",
+            "data": "value",
+            "comments": "Padding bottom will have the same value as top"            
+        }, 
+        {
+            "value": "@tab-control__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__hover__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__hover__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__active__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-control__active__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-content__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tab-content__padding-top",
+            "data": "value"            
+        }, 
+        {
+            "value": "@tab-content__padding-right",
+            "data": "value"            
+        }
+    ],
+    "accordions": [
+        {
+            "value": "@accordion-control__font-size",
+            "data": "value"
+        },
+        {
+            "value": "@accordion-control__font-weight",
+            "data": "value"            
+        },
+        {
+            "value": "@accordion-control__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-control__color",
+            "data": "color"                                                     
+        }, 
+        {
+            "value": "@accordion-control__height",
+            "data": "value"            
+        }, 
+        {
+            "value": "@accordion-control__padding-top",
+            "data": "value"            
+        }, 
+        {
+            "value": "@accordion-control__padding-right",
+            "data": "value"                                                     
+        }, 
+        {
+            "value": "@accordion-control__hover__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-control__hover__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-control__active__background-color",
+            "data": "color"                                                     
+        },         
+        {
+            "value": "@accordion-control__active__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@accordion-content__background-color",
+            "data": "color"                                                     
+        },         
+        {
+            "value": "@accordion-content__border",
+            "data": "value"            
+        }
+    ],
+    "tables": [
+        {
+            "value": "@table__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@table__border-width",
+            "data": "value"            
+        },
+        {
+            "value": "@table-head__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@table-foot__background-color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@table-body-th__background-color",
+            "data": "color"            
+        },
+        {
+            "value": "@table-th__color",
+            "data": "color"            
+        },
+        {
+            "value": "@table-cell__padding-horizontal",
+            "data": "value"            
+        },
+        {
+            "value": "@table-cell__padding-vertical",
+            "data": "value"            
+        }
+    ],    
+    "tooltips": [
+        {
+            "value": "@tooltip__background",
+            "data": "color"            
+        },
+        {
+            "value": "@tooltip__border-color",
+            "data": "color"            
+        },
+        {
+            "value": "@tooltip__border-width",
+            "data": "value"            
+        }, 
+        {
+            "value": "@tooltip__color",
+            "data": "color"            
+        }, 
+        {
+            "value": "@tooltip__font-size",
+            "data": "value"            
+        },
+        {
+            "value": "@tooltip__line-height",
+            "data": "value"            
+        },
+        {
+            "value": "@tooltip__padding",
+            "data": "value"            
+        },
+        {
+            "value": "@tooltip__min-width",
+            "data": "value",
+            "comments": "By default, the value is 210px"            
+        },
+        {
+            "value": "@tooltip__max-width",
+            "data": "value",
+            "comments": "By default, the value is 360px"            
+        },
+        {
+            "value": "@tooltip-arrow__size",
+            "data": "value",
+            "comments": "By default, the value is 5px"            
+        },
+        {
+            "value": "@tooltip-arrow__offset",
+            "data": "value",
+            "comments": "By default, the value is 10px"            
+        }
+    ]     
+ }
+
+
+

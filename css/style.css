@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#212542;
+    font-size: 14px;
+    font-family: 'robotolight';
+    letter-spacing: 1px;
+    font-weight: normal;
+    overflow: hidden;
+}
+.app_title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #dadada;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 10px;    
+}
+#right_cont{
+    padding: 10px;
+    width: 100%; 
+    transition: all 1s ease;
+    height: 567px;
+    float: left;
+    overflow-y: auto;
+}
+.var_title{
+    background: #474b7b;
+    padding: 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #2f3258;
+}
+.var_content{
+    display: none;
+    background: #373658;
+    padding: 10px;
+} 
+
+.variable_container{
+    color: #e3e3e3;
+    padding: 5px 5px 5px 0px;
+    font-size: 12px;
+    display: inline-block;
+    width: 46%;
+    position: relative;
+    margin-bottom: 10px;
+}
+.variable__name{
+    display: inline-block;
+    margin-right: 10px;     
+    text-transform: capitalize;  
+    width: 200px;
+    text-align: right;   
+}
+
+.comments {
+   display: inline-block;
+   vertical-align: top;
+   vertical-align: middle;
+   margin-left: 10px;
+   cursor: help;
+}
+
+.comments span{    
+    background-image: url('../img/info.svg');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+}
+.comments p{
+    position: absolute;
+    background: rgba(0,0,0,0.9);
+    padding: 10px;
+    bottom: 37px;
+    right: 62px;
+    width: auto;
+    font-size: 11px;
+    border-radius: 5px;    
+    opacity: 0;
+    visibility: hidden;    
+}
+
+.variable_container .comments:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type="text"]{
+    padding: 5px;
+    box-shadow: none;
+    border: none;
+    vertical-align:top;
+}
+
+.paste_button{
+    position: absolute;
+    background-image: url('../img/paste_icon.svg');
+    width: 20px;
+    height: 20px;
+    font-size: 0px;
+    display: inline-block;
+    background-size: cover;
+    cursor: pointer;
+    vertical-align: top;
+    margin-left: 10px;
+    position: relative;
+}
+.color_display{
+    background: #333763;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+} 
+
+.upload_container{
+    position: absolute;
+    width: 10%;
+    top: 0;
+    right: 0;
+    background:#EEEEEE;
+    height: 628px;
+    z-index: 1;
+    transform: translateX(100px);
+    overflow-y: auto;
+    transition: all 1s ease;
+}
+
+.upload_container img{
+    width: 100%;
+}
+
+#uploaded__image{
+    display: none
+}
+.upload_button--cont{
+    float: left;
+    position: relative;
+}
+.chmln__colors-elem{
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+.chmln__colors-elem:before{
+    opacity: 0;
+    visibility: hidden;
+    content: "COPY";
+    position: absolute;
+    width: 76%;    
+    z-index: 2;
+    background: rgba(0,0,0,0.9);    
+    color: #e8e8e8;
+    top: 0;
+    text-align: center;
+    font-size: 11px;
+    padding: 12px;
+    cursor: pointer;
+    left: 0;
+    font-weight: bold;
+    font-family: 'robotomedium';
+    transition: all .5s ease;
+}
+.chmln__colors-elem:hover:before{
+    visibility: visible;
+    opacity: 1;
+}
+.right_panel--active{
+    transform: translateX(0);
+}
+#right_cont.left_panel--active{ 
+    width: 90%;
+}
+.copy_value{
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0px;
+    background: #fff;
+    padding: 2px;
+    color: #fff;
+    z-index: 3;
+}
+
+button {
+    -webkit-app-region: no-drag;
+  }
+.titlebar {
+    -webkit-user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+footer{
+    background: #FBFBFB;
+    padding:10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;   
+    z-index: 2; 
+}
+.export__file{
+    float: left;
+    margin-right: 10px;
+}
+.upload_button--cont input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+footer button{
+    background: #25b647;
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: none;
+    font-family: 'robotoregular';
+    cursor: pointer;
+}
+
+
+#Layout .variable_container,
+#Buttons .variable_container,
+#PrimaryButton .variable_container
+{
+    width:50%;
+}
+
+#Layout .variable__name,
+#Buttons .variable__name,
+#PrimaryButton .variable__name
+{
+    width:238px;
+}
+.red{
+    color: red;
+    background: red;
+}

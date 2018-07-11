@@ -1,0 +1,28 @@
+{
+  "name": "magento2_theme_builder",
+  "productName": "Magento 2 theme builder",
+  "version": "0.1.0",
+  "description": "App to generate magento 2 theme stayles",
+  "main": "main.js",
+  "dependencies": {
+    "electron-storage": "^1.0.7"
+  },
+  "devDependencies": {
+    "electron": "^2.0.4",
+    "electron-packager": "^12.1.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager ./ --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyushwalia/magento_desktop_app.git"
+  },
+  "author": "piyush walia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piyushwalia/magento_desktop_app/issues"
+  },
+  "homepage": "https://github.com/piyushwalia/magento_desktop_app#readme"
+}
