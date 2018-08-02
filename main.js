@@ -1,25 +1,23 @@
-require('electron-reload')(__dirname)
-
-
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
-const storage = require('electron-storage');
-
+ 
 var ipc = require('electron').ipcRenderer;
  
 process.env.NODE_ENV = 'development';
-
 const {app, BrowserWindow, Menu} = electron;
 // variables
-let mainWindow;
+let mainWindow; 
 
 
 app.on('ready', function(){
 
     mainWindow = new BrowserWindow({            
         width:1050,
-        height:700
+        height:700,
+        frame: false,
+        titleBarStyle: 'hidden',
+        icon: path.join(__dirname, 'icons/png/64x64.png')        
     });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainWindow.html'),
@@ -28,7 +26,7 @@ app.on('ready', function(){
     }));
   
     // Open the DevTools.
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
     
   // Build menu from template
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
@@ -40,26 +38,18 @@ app.on('ready', function(){
 
 
 
+app.on('window-all-closed', function () {
+    // check if the system is macOS
+    // If so, quit the application
+    // otherwise, this is already done automatically
+    if(process.platform !== 'Darwin') {
+        app.quit()
+    }
+})
 
 
-const mainMenuTemplate = [
-    {
-        label: 'File',
-        submenu:[
-            {
-                label: 'Upload Mockup File ',                       
-            },
-            {
-                label:'Clear items'
-            },
-            {
-                label:'Quit',                
-                click(){
-                    app.quit();
-                }
-            }
-        ]
-    },
+
+const mainMenuTemplate = [    
     {
         label: "Edit",
         submenu: [

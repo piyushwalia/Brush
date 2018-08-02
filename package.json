@@ -1,29 +1,27 @@
 {
-  "name": "magento_app",
-  "version": "1.0.0",
-  "description": "App to generate magento 2 theme stayles",
+  "name": "brush",
+  "productName": "Brush | Theme styling for Magento 2",
+  "version": "0.1.0",
+  "description": "Desktop App to generate Magento 2 theme styles",
   "main": "main.js",
-  "dependencies": {
-    "clipboard": "^2.0.1",
-    "electron": "^2.0.2",
-    "electron-storage": "^1.0.7",
-    "node-each": "^1.0.1",
-    "npm": "^6.1.0"
-  },
   "devDependencies": {
-    "electron-reload": "^1.2.2"
+    "electron": "^2.0.6"    
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-linux": "electron-packager .  Brush Theme styling for Magento 2 --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/png/512x512.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src release-builds/Brush-linux-x64/ --arch amd64 --config debian.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/piyushwalia/magento_desktop_app.git"
+    "url": "git+https://github.com/piyushwalia/Brush.git"                
   },
-  "author": "piyush walia",
+  "author": "Piyush Walia <walia11127@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/piyushwalia/magento_desktop_app/issues"
+    "url": "https://github.com/piyushwalia/Brush/issues"
   },
-  "homepage": "https://github.com/piyushwalia/magento_desktop_app#readme"
+  "homepage": "https://github.com/piyushwalia/Brush.git#readme",
+  "dependencies": {}
 }

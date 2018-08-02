@@ -5,7 +5,24 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body style="-webkit-app-region: drag">
-    <h1 class="app_title">Magento 2 theme Styling using Core Variables</h1>
+
+    <div class="selection__overlay">
+        <p>Please choose your Parent theme</p>
+        <span id="sel_blank__theme">Blank Theme</span>
+        <span id="sel_luma__theme">Luma Theme</span>
+    </div>
+
+    <h1 class="app_title"><img src="img/logo.png">
+        <b>BRUSH</b> 
+        <span>Theme Styling for Magento 2</span>
+    </h1> 
+    <div class="header_button--cont">            
+            <div class="upload_button--cont">
+                <button class="upload__btn btn">Upload Design</button>
+                <input type="file" id="upload__file" />
+            </div>
+            <button  id="create_file" class="export__file btn" >Download Theme File</button>
+    </div>
     <!-- Left Container -->
     <div id="right_cont">
        
@@ -17,16 +34,19 @@
             <div class="chmln-demo__colors"></div>
     </div>    
 
-      
-    <!-- Export container -->
-    <footer>
-        <button  id="create_file" class="export__file" >Create File</button>
-        <div class="upload_button--cont">
-            <button class="upload__btn">Upload a file</button>
-            <input type="file" id="upload__file" />
+    <div id="theme__popup"  style="display:none;" class="theme__p--cont" > 
+        <div class="popup__cont">
+            <div class="popup__row">
+                <p>Vendor Name</p>
+                <input type="text">
+            </div>
+            <div class="popup__row">
+                <p>Theme Name</p>
+                <input type="text">
+            </div>            
+            <input type="button" value="Generate__theme" id="gen_theme">
         </div>
-            
-    </footer>
+    </div>
 
     <div class="copy_value" id="rect"></div>
 
