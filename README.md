@@ -1,1 +1,1 @@
-# magento_desktop_app
+# Brush | Theme styling for Magento 2 using less variables 
