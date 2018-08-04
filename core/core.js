@@ -176,7 +176,7 @@ const forms_elem = '.forms__content .variable__name';
                 
                 reader.onload = function (e) {
                     $('#uploaded__image').attr('src', e.target.result);                    
-                    $("img").chameleon("getImageColors", {
+                    $("#uploaded__image").chameleon("getImageColors", {
                         "sort_type": "disabled",
                         "color_format": "hex",
                         "img_src": "",
@@ -188,21 +188,19 @@ const forms_elem = '.forms__content .variable__name';
                           var $colors = jQuery.fn.chameleon('wrapColor', colors, s.color_format); 
                           jQuery('._example-GETIMAGECOLORS_full-container .chmln-demo__colors').html($colors); 
                           $container.removeClass('_loading').addClass('_done').siblings().removeClass('_done'); 
-                          $('.chmln__colors-elem').on('click', function(){
-                              // var to get css attributes
-                            var dd= $(this).attr("style");
-                            // var to get # value
+                          $('.chmln__colors-elem').on('click', function(){                              
+                            var dd= $(this).attr("style");                            
                             var hash_color = $(this).text();
                             $('.copy_value').text(hash_color).attr("style",dd);                                
                         });
                         },
                         "onGetColorsError": function(colors, $container, s, img_src) { 
-                          jQuery('._example-GETIMAGECOLORS_full- container .chmln-demo__colors').html('Error occurred on getting colors!');                           
-                          var toast = $('<div class="notification__cont error_toast">Please upload correct Image Format like JPG or PNG!</div>')
-                            $('body').append(toast);
-                            toast.fadeIn(400).delay(1200).fadeOut(1700);                                        
-                            setTimeout(function() {toast.remove();}, 1800); 
-                        },                        
+                          jQuery('._example-GETIMAGECOLORS_full-container .chmln-demo__colors').html('Error occurred on getting colors!');                           
+                          var upload_img_error = $('<div class="notification__cont error_toast">Please upload correct Image Format like JPG or PNG!</div>')
+                            $('body').append(upload_img_error);
+                            upload_img_error.fadeIn(400).delay(1000).fadeOut(600);                                        
+                            setTimeout(function() {upload_img_error.remove();}, 1800);                                                                            
+                        }                        
                       });
                 }
                 

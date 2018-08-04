@@ -5,22 +5,26 @@
   "description": "Desktop App to generate Magento 2 theme styles",
   "main": "main.js",
   "devDependencies": {
-    "electron": "^2.0.6"    
+    "electron": "^2.0.6"  
   },
   "scripts": {
     "start": "electron .",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --ignore=.gitignore --prune=true --out=release-builds",
     "package-linux": "electron-packager .  Brush Theme styling for Magento 2 --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/png/512x512.png --prune=true --out=release-builds",
     "create-debian-installer": "electron-installer-debian --src release-builds/Brush-linux-x64/ --arch amd64 --config debian.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/piyushwalia/Brush.git"                
+    "url": "git+https://github.com/piyushwalia/Brush.git"
   },
+  "keywords": [
+    "electron",
+    "desktop"    
+  ],
   "author": "Piyush Walia <walia11127@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/piyushwalia/Brush/issues"
   },
-  "homepage": "https://github.com/piyushwalia/Brush.git#readme",
+  "homepage": "https://github.com/piyushwalia/Brush.git#readme"
 }

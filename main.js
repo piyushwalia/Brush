@@ -6,36 +6,39 @@ var ipc = require('electron').ipcRenderer;
  
 process.env.NODE_ENV = 'development';
 const {app, BrowserWindow, Menu} = electron;
-// variables
 let mainWindow; 
 
 
 app.on('ready', function(){
 
-    mainWindow = new BrowserWindow({            
+    mainWindow = new BrowserWindow({      
+        title: 'Brush | Theme styling for Magento2', 
+        backgroundColor: '#1a1a1d',       
         width:1050,
         height:700,
-        frame: false,
+        minWidth:900,
+        minHeight:600,        
+        frame: false,        
         titleBarStyle: 'hidden',
-        icon: path.join(__dirname, 'icons/png/64x64.png')        
+        icon: path.join(__dirname, '/icons/png/64x64.png')        
     });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainWindow.html'),
         protocol: 'file:',
         slashes: true
-    }));
-  
-    // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
+    }));     
     
   // Build menu from template
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
   // Insert menu
   Menu.setApplicationMenu(mainMenu);
 
+  mainWindow.webContents.openDevTools();
+
 });
 
 
+ 
 
 
 app.on('window-all-closed', function () {

@@ -35,7 +35,7 @@
 }
 
 body{
-    background-color:#1a1a1d;
+    background-color:#x;
     font-size: 14px;
     font-family: 'latoregular';
     letter-spacing: 1px;
@@ -473,6 +473,11 @@ footer{
 }
 
 .error_toast{
-    background: #FF4E50;
-    
+        background: #FF4E50;
 }
+
+.chmln-demo__colors{
+    color: #8c8c8c;
+    font-size: 13px;        
+}
+
