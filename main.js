@@ -33,8 +33,6 @@ app.on('ready', function(){
   // Insert menu
   Menu.setApplicationMenu(mainMenu);
 
-  mainWindow.webContents.openDevTools();
-
 });
 
 
