@@ -2,7 +2,7 @@
   "name": "brush",
   "productName": "Brush | Theme styling for Magento 2",
   "version": "1.0.0",
-  "description": "Desktop App to generate Magento 2 theme styles",
+  "description": "Desktop App to style Magento 2 theme using its core less variables",
   "main": "main.js",
   "devDependencies": {
     "electron": "^2.0.6"  
