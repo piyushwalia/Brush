@@ -4,7 +4,7 @@ const url = require('url');
  
 var ipc = require('electron').ipcRenderer;
  
-process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'production';
 const {app, BrowserWindow, Menu} = electron;
 let mainWindow; 
 
