@@ -1,30 +1,34 @@
 {
-  "name": "brush",
-  "productName": "Brush | Theme styling for Magento 2",
-  "version": "1.0.0",
-  "description": "Desktop App to style Magento 2 theme using its core less variables",
-  "main": "main.js",
-  "devDependencies": {
-    "electron": "^2.0.6"  
-  },
-  "scripts": {
-    "start": "electron .",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --ignore=.gitignore --prune=true --out=release-builds",
-    "package-linux": "electron-packager .  Brush Theme styling for Magento 2 --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/png/512x512.png --prune=true --out=release-builds",
-    "create-debian-installer": "electron-installer-debian --src release-builds/Brush-linux-x64/ --arch amd64 --config debian.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/piyushwalia/Brush.git"
-  },
-  "keywords": [
-    "electron",
-    "desktop"    
-  ],
-  "author": "Piyush Walia <walia11127@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/piyushwalia/Brush/issues"
-  },
-  "homepage": "https://github.com/piyushwalia/Brush.git#readme"
+    "name": "Brush",
+    "productName": "Brush | Theme styling for Magento 2",
+    "version": "1.0.0",
+    "description": "Theme styling for Magento2 using LESS variables",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^2.0.6",
+        "electron-installer-debian": "^0.8.1",
+        "electron-packager": "^12.1.0"
+    },
+    "scripts": {
+        "start": "electron .",
+        "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --ignore=.gitignore --prune=true --out=release-builds",
+        "package-linux": "electron-packager .  Brush Theme styling for Magento 2 --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/png/512x512.png --prune=true --out=release-builds",
+        "create-debian-installer": "electron-installer-debian --src release-builds/Brush-linux-x64/ --arch amd64 --config debian.json",
+        "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+        "create-installer-win": "node installers/windows/createinstaller.js"        
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/piyushwalia/Brush.git"
+    },
+    "keywords": [
+        "electron",
+        "desktop"
+    ],
+    "author": "Piyush Walia <walia11127@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/piyushwalia/Brush/issues"
+    },
+    "homepage": "https://github.com/piyushwalia/Brush.git#readme"
 }

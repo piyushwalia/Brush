@@ -16,22 +16,18 @@ app.on('ready', function(){
         backgroundColor: '#1a1a1d',       
         width:1050,
         height:700,
-        minWidth:900,
-        minHeight:600,        
-        frame: false,        
+        minWidth:1000,
+        minHeight:600,                
         titleBarStyle: 'hidden',
-        icon: path.join(__dirname, '/icons/png/64x64.png')        
+        icon: path.join(__dirname, 'icons/png/64x64.png')        
     });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainWindow.html'),
         protocol: 'file:',
         slashes: true
     }));     
-    
-  // Build menu from template
-  const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-  // Insert menu
-  Menu.setApplicationMenu(mainMenu);
+    // Build menu from template
+    require('./core/mainmenu.js')
 
 });
 
@@ -50,23 +46,5 @@ app.on('window-all-closed', function () {
 
 
 
-const mainMenuTemplate = [    
-    {
-        label: "Edit",
-        submenu: [
-            { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
-            { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
-            { type: "separator" },
-            { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
-            { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:"},
-            { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:",
-                // click(){
-                //     document.querySelectorAll("input").value = "";
-                // } 
-            },
-            { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
-        ]}
-    
-];
 
 
