@@ -39,18 +39,20 @@ Follow these instructions to use Brush for theme styling:
 
 ## Features
 - Color picker tool added to color variables.
-- Paste previous selected color without co
-
+- Selected color will be shown at the bottom.
+- Paste previous selected color using paste button next to textbox.
+- Can copy variables of selected tab using "Copy To clipboard" button.
+- Info icon added for reference to get information about the usuage of the variable.
 
 ## Screenshots
 
 ## Future Goals
 
-This is version 1.0.0 of Brush. I aim to continuously evolve the application and add supplementing functionality. 
 
-I request you all to use the application and let me know if you encounter any issues or have any queries. 
 
 ## Development
+I aim to continuously evolve the application and add supplementing functionality and encourage all sorts of contributions that help us make this project more awesome. Contact me walia11127@gmail.com
+
 ``` bash
 # clone the repository
 git clone https://github.com/piyushwalia/Brush
