@@ -11,7 +11,7 @@
 [Compatibility](#compatibility)<br>
 [How to Use](#how-to-use)<br>
 [Features](#features)<br>
-[Screenshots](#screenshots)<br>
+[Screenshot](#screenshot)<br>
 [Future Goals](#future-goals)<br>
 [Development](#development)<br>
 
@@ -44,7 +44,7 @@ Follow these instructions to use Brush for theme styling:
 - Can copy variables of selected tab using "Copy To clipboard" button.
 - Info icon added for reference to get information about the usuage of the variable.
 
-## Screenshots
+## Screenshot
 <img src="https://user-images.githubusercontent.com/1760931/43864906-9f9a52f6-9b7e-11e8-9cff-b212fb80e783.gif"> 
 
 ## Future Goals
