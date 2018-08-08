@@ -45,6 +45,7 @@ Follow these instructions to use Brush for theme styling:
 - Info icon added for reference to get information about the usuage of the variable.
 
 ## Screenshots
+<img src="https://user-images.githubusercontent.com/1760931/43864906-9f9a52f6-9b7e-11e8-9cff-b212fb80e783.gif"> 
 
 ## Future Goals
 
