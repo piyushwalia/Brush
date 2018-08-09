@@ -48,6 +48,9 @@ Follow these instructions to use Brush for theme styling:
 <img src="https://user-images.githubusercontent.com/1760931/43864906-9f9a52f6-9b7e-11e8-9cff-b212fb80e783.gif"> 
 
 ## Future Goals
+- [] Custom variables setion wil be added for styling.
+- [] Theme package generation including basic Magento 2 theme files.
+- [] Finding and copying of folders and files to theme root directory for every container. 
 
 
 
