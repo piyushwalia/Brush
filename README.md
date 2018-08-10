@@ -8,7 +8,7 @@
 ## Table of Contents
 
 [Objective](#objective)<br>
-[Compatibility](#compatibility)<br>
+[Download](#download)<br>
 [How to Use](#how-to-use)<br>
 [Features](#features)<br>
 [Screenshot](#screenshot)<br>
@@ -19,7 +19,7 @@
 
 Brush makes Magento 2 theme styling easy by pulling all the built-in less variables in a single place (in the application). Using this, you can generate a theme.less file provided by Magento 2 to overwrite its default styling variables.
 
-## Compatibility
+## Download
 Brush is compatible with Windows, Mac and Linux.
 Go to the [Release](https://github.com/piyushwalia/Brush/releases) tab and download the installer for the latest release.
 
