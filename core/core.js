@@ -1,20 +1,10 @@
-const electron = require('electron')
-const path = require('path')
-const os = require('os');
-var app = require('electron').remote; 
-const clipboard = require('electron').clipboard
-var dialog = app.dialog;
-const BrowserWindow = electron.remote.BrowserWindow;
-const fs = require("fs");
-const ipc = electron.ipcMain
-const shell = electron.shell
-const variables = [];
+$( document ).ready(function() {
 const input_parent__cont = '<div class="variable_container"><span class="variable__name">';
 const desktop_re = '.Desktop_Navigation__content .variable__name, .Desktop_Submenu__content .variable__name';
 const forms_elem = '.forms__content .variable__name';
-        $.getJSON('./variables/variables.json', function(data) {                               
+        $.getJSON('../variables/variables.json', function(data) {                               
                 $.each(data, function(i,value){                    
-                    $('#right_cont').append('<div id='+i+' class="box__container"><span class="view__button">Copy</span><h2 class="var_title">'+i+'</h2><div class=" '+i+'__content  var_content"></div></div>');                                             
+                    $('#right_cont').append('<div id='+i+' class="box__container"><span class="view__button" data-clipboard-text="">Copy</span><h2 class="var_title">'+i+'</h2><div class=" '+i+'__content  var_content"></div></div>');                                             
                     $.each(this, function(b, f) {                      
                     if (jQuery.isEmptyObject(f.comments))
                         {
@@ -114,9 +104,11 @@ const forms_elem = '.forms__content .variable__name';
                         clipboard.writeText('');
                         }                                                                                                                
                 }); 
+                new ClipboardJS('.view__button');
                 //get values of specific box container to clipboard        
                 $('.view__button').on('click', function(){
-                    let view_content='';  
+                    let view_content=''; 
+                    let clipboard_output = ''; 
                     var id_view = $(this).closest("div").prop("id");
                     var id_get = document.getElementById(id_view);
                     var input__values = id_get.querySelectorAll("input, select"); 
@@ -132,18 +124,27 @@ const forms_elem = '.forms__content .variable__name';
                         $('body').append(toast);
                         toast.fadeIn(400).delay(1000).fadeOut(600);                                        
                         setTimeout(function() {toast.remove();}, 1800);                                                                            
-                        clipboard.writeText('');
+                        // clipboard.writeText('');
+                        // console.log(clipboard_output);
+                        
                     }
                     else{
                         var toast = $('<div class="notification__cont success_toast">Variables copied to clipboard</div>')
                         $('body').append(toast);
                         toast.fadeIn(400).delay(1000).fadeOut(600);                                        
                         setTimeout(function() {toast.remove();}, 1800);                                                                            
-                        clipboard.writeText(clipboard_output);
+                        // clipboard.writeText(clipboard_output);
+                        console.log(clipboard_output);
+                        $(this).attr('data-clipboard-text',clipboard_output)
+                        
+                        
                     }
                     
-                });                            
+                });
+                    
+                                           
         });
+        
                
         function luma_theme(){                        
             $('input').each(function(){
@@ -221,8 +222,18 @@ const forms_elem = '.forms__content .variable__name';
         })      
 
 
-  var uri = '';
-  var default_theme_data = decodeURIComponent(uri);
+        function download(filename, text) {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+        
+            element.style.display = 'none';
+            document.body.appendChild(element);
+        
+            element.click();
+        
+            document.body.removeChild(element);
+        }
 
  
         // Exporting theme file
@@ -239,31 +250,11 @@ const forms_elem = '.forms__content .variable__name';
                             content += input__values[i].name + ':' + ' ' + input__values[i].value + ';'+'\n';                                  
                         }                                             
                     }                    
-                }
-                                                
+                }                                                
             }
-
+               
+               var filename = "_theme.less";
             
-            dialog.showSaveDialog({defaultPath: '~/_theme.less',filters: [
-                { name: '_theme', extensions: ['less'] }                 
-                ],},(fileName) => {
-                if (fileName === undefined){
-                    var toast = $('<div class="notification__cont error_toast">You didnt save the file</div>')
-                        $('body').append(toast);
-                        toast.fadeIn(400).delay(1000).fadeOut(2200);                                        
-                        setTimeout(function() {toast.remove();}, 2600);   
-                    
-                    return;
-                }
-                fs.writeFile(fileName, content + default_theme_data, (err) => {
-                    if(err){
-                        alert("An error ocurred creating the file "+ err.message)
-                    }                                                        
-                    var toast = $('<div class="notification__cont success_toast">The file has been succesfully saved</div>')
-                    $('body').append(toast);
-                    toast.fadeIn(400).delay(1200).fadeOut(2200);                                        
-                    setTimeout(function() {toast.remove();}, 2600); 
-                });                
-            }); 
-        });
-        
+               download(filename, content);
+        },false);
+    });

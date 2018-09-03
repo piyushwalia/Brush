@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Magento 2 theme generation</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125029335-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125029335-1');
+</script>
+
+</head>
+<body style="-webkit-app-region: drag">
+    
+    <div class="selection__overlay">
+        <p>Please choose your Parent theme</p>
+        <span id="sel_blank__theme">Blank Theme</span>
+        <span id="sel_luma__theme">Luma Theme</span>
+    </div>
+
+    <h1 class="app_title"><img src="img/logo.png">
+        <b>BRUSH</b> 
+        <span>Theme Styling for Magento 2</span>
+    </h1> 
+    <div class="header_button--cont">            
+            <div class="upload_button--cont">
+                <button class="upload__btn btn">Upload Design</button>
+                <input type="file" id="upload__file" />
+            </div>
+            <button  id="create_file" class="export__file btn" >Download Theme File</button>
+    </div>
+    <!-- Left Container -->
+    <div id="right_cont">
+       
+    </div>
+    
+    <!-- Image container -->
+    <div class="upload_container _example-GETIMAGECOLORS_full-container">        
+            <img id="uploaded__image" src="#" alt="your image" />        
+            <div class="chmln-demo__colors"></div>
+    </div>    
+
+   
+
+    <div class="copy_value" id="rect"></div>
+
+    
+    <script src="./vendor/jquery-3.3.1.min.js"></script>
+    <script src="./core/core.js"></script>
+    <script src="./vendor/jscolor.js"></script>
+    <script src="./vendor/jquery.chameleon.js"></script>    
+    <script src="./vendor/clipboard.min.js"></script>
+    
+</body>
+</html>
